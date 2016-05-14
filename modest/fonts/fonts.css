@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Quattrocento';
+    src: url('quattrocentosansbold.eot');
+    src: url('quattrocentosansbold.eot?#iefix') format('embedded-opentype'),
+         url('quattrocentosansbold.woff') format('woff'),
+         url('quattrocentosansbold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
