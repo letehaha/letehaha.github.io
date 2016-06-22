@@ -260,6 +260,16 @@ i, em { font-style: italic }
     width: 500px;
     border: 2px solid #333;
 }
+.demo_slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.demo_slide h2{
+    font-size: 3em;
+    /*text-transform: uppercase;*/
+}
 .sev_cont{
     margin: 40px 100px 0 50px;
     height: 100%;
@@ -270,6 +280,10 @@ i, em { font-style: italic }
     width: 100%;
     font: 300 1.1em/1.5 'Roboto',sans-serif;
     margin-bottom: 35px;
+}
+.sev_stat img{
+    display: block;
+    margin:auto;
 }
 .eight_descr{
     margin: 40px 100px 0 50px;
@@ -309,9 +323,10 @@ i, em { font-style: italic }
 .last_codepen{
     position: absolute;
     bottom: 70px;
-    left: 100px;
+    left: 50px;
     display: flex;
     align-items: center;
+    z-index: 9999;
 }
 .last_codepen span a{
     display: inline-block;
