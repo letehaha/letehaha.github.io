@@ -107,7 +107,7 @@ i, em { font-style: italic }
     display: block;
     /*align-items: center;*/
     /*justify-content: center;*/
-    width: 1560px;
+    width: 100vw;
     height: 800px;
     padding: 40px 60px;
     color: #111;
@@ -266,9 +266,21 @@ i, em { font-style: italic }
     align-items: center;
     height: 100%;
 }
-.demo_slide h2{
+.demo_slide_box{
+    display: block;
+    text-align: center;
+}
+.demo_slide_box h2{
+    display: block;
     font-size: 3em;
+    line-height: 1.5em;
     /*text-transform: uppercase;*/
+}
+.demo_slide_box a{
+    display: block;
+    font-size: 2em;
+    margin-top: 100px;
+    /*color: #333;*/
 }
 .sev_cont{
     margin: 40px 100px 0 50px;
