@@ -7,9 +7,6 @@
   padding: 0;
   outline: none;
 }
-ol, ul{
-  list-style-type: none;
-}
 
 html {
   font-family: sans-serif; /* 1 */
@@ -240,4 +237,8 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
+}
+
+ol, ul{
+  list-style-type: none;
 }
