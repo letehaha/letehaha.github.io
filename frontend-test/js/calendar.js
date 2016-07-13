@@ -12,12 +12,3 @@ function setText(id, val){
     document.getElementById(id).innerHTML = val;
 };
 window.onload = calendar;
-
-
-// *************************************
-// *************************************
-
-// https://learn.javascript.ru/modifying-document Много полезной инфы о вставке/удалении
-
-// *************************************
-// *************************************
