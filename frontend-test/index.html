@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>frontend-test</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://use.fontawesome.com/374108d75d.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" ></script>
+</head>
+<body>
+	
+	<header class="main-header">
+		<div class="header__content">
+			<nav class="header__nav">
+				<div class="header__btn">
+					<span class="head_btn btn-add">Добавить</span>
+					<div class="popup__btn-add">
+						<div class="btn-add_wrapper">
+							<input type="text" placeholder="5 марта, 14:00, День рождения">
+							<span class="popup__btn-add__btn">Создать</span>
+							<span class="popup_close-btn"></span>
+						</div>
+					</div>
+				</div>
+				<div class="header__btn">
+					<span class="head_btn btn-res">Обновить</span>
+				</div>
+			</nav>
+			<div class="search">
+				<div class="search__input">
+					<i class="fa fa-search" aria-hidden="true"></i>
+					<input type="text" placeholder="Событие, дата или участник">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<nav class="content_nav">
+				<div class="content_nav__nav">
+					<span class="main__nav-btn main__nav-btn-left">◄</span>
+					<h1 id="month"></h1>
+					<span class="main__nav-btn main__nav-btn-right">►</span>
+				</div>
+				<div class="today">
+					<button id="today">Сегодня</button>
+				</div>
+			</nav>
+			<div class="calendar" id="calendar">
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date_day-name">Понедельник,</span>
+						<span class="date-number">27</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date_day-name">Вторник,</span>
+						<span class="date-number">28</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date_day-name">Среда,</span>
+						<span class="date-number">29</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date_day-name">Четверг,</span>
+						<span class="date-number">30</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date_day-name">Пятница,</span>
+						<span class="date-number">1</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date date-active">
+						<span class="date_day-name">Суббота,</span>
+						<span class="date-number">2</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date_day-name">Воскресенье,</span>
+						<span class="date-number">3</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">4</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">5</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem calendar-name_p">
+					<header class="date">
+						<span class="date-number">6</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">7</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">8</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem active_used">
+					<header class="date">
+						<span class="date-number">9</span>
+					</header>
+					<article>
+						<p id="ar-event" class="ar-event">Напиться!</p>
+						<p id="ar-party" class="ar-party">Витя Костин, Петр Михайлов</p>
+					</article>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">10</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">11</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">12</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem active_today">
+					<header class="date">
+						<span class="date-number">13</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">14</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">15</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">16</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">17</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">18</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">19</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">20</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">21</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem active_used">
+					<header class="date">
+						<span class="date-number">22</span>
+					</header>
+					<article>
+						<p id="ar-event" class="ar-event">ДР!</p>
+						<p id="ar-party" class="ar-party">Дима Молодцов</p>
+					</article>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">23</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">24</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">25</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">26</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">27</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">28</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">29</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">30</span>
+					</header>
+				</div>
+				<div id="calendar-name" class="calendar-elem">
+					<header class="date">
+						<span class="date-number">31</span>
+					</header>
+				</div>
+				<div class="popup__calendar">
+					<div class="popup__calendar-wrapper">
+						<span class="popup-c_close-btn"></span>
+						<form id="popup__form">
+							<input type="text" id="event" placeholder="Событие" maxlength="20">
+							<input type="text" maxlength="10" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" id="date" placeholder="День, месяц, год">
+							<input type="text" maxlength="30" id="party" placeholder="Имена участников">
+							<textarea name="descr" cols="30" maxlength="140" rows="10" placeholder="Описание" id="descr"></textarea>
+							<input type="button" onclick="popupAdd()" id="cp-submit" class="cp-submit" value="Готово">
+							<input type="button" onclick="popupDelete()"id="cp-reset" class="cp-reset" value="Удалить">
+						</form>
+					</div>
+				</div>
+				<div class="popup_demo"></div>
+			</div>
+		</div>
+	</main>
+	
+	<script>
+		function popupAdd() {
+		var popEvent = document.forms["popup__form"].elements["event"].value,
+				popDate  = document.forms["popup__form"].elements["date"].value,
+				popParty = document.forms["popup__form"].elements["party"].value,
+				popDescr = document.forms["popup__form"].elements["descr"].value,
+				articleDay = '<p id="ar-event" class="ar-event">' + popEvent + '</p><p id="ar-date" class="ar-date">' + popDate + '</p><p id="ar-party" class="ar-party">' + popParty + '</p><p id="ar-descr" class="ar-descr">' + popDescr + '</p>',
+				newArticle = document.createElement('article'),
+				parentElem = document.getElementById('calendar-name');
+
+		newArticle.setAttribute('id', 'artc_pop');
+		newArticle.innerHTML = articleDay;
+		parentElem.appendChild(newArticle);
+	};
+	</script>
+	<script>
+	function popupDelete() {
+		var articleAll = document.getElementById('artc_pop');
+		articleAll.parentNode.removeChild(articleAll);
+	};
+	</script>
+	<script src="js/common.js"></script>
+	<script src="js/calendar.js"></script>
+</body>
+</html>
