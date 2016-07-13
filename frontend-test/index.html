@@ -238,7 +238,7 @@
 						<span class="date-number">31</span>
 					</header>
 				</div>
-				<div class="popup__calendar">
+				<div class="popup__calendar" id="popup__calendar">
 					<div class="popup__calendar-wrapper">
 						<span class="popup-c_close-btn"></span>
 						<form id="popup__form">
@@ -246,8 +246,8 @@
 							<input type="text" maxlength="10" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" id="date" placeholder="День, месяц, год">
 							<input type="text" maxlength="30" id="party" placeholder="Имена участников">
 							<textarea name="descr" cols="30" maxlength="140" rows="10" placeholder="Описание" id="descr"></textarea>
-							<input type="button" onclick="popupAdd()" id="cp-submit" class="cp-submit" value="Готово">
-							<input type="button" onclick="popupDelete()"id="cp-reset" class="cp-reset" value="Удалить">
+							<input type="button" id="cp-submit" class="cp-submit" value="Готово">
+							<input type="button" id="cp-reset" class="cp-reset" value="Удалить">
 						</form>
 					</div>
 				</div>
@@ -256,7 +256,7 @@
 		</div>
 	</main>
 	
-	<script>
+<!-- 	<script>
 		function popupAdd() {
 		var popEvent = document.forms["popup__form"].elements["event"].value,
 				popDate  = document.forms["popup__form"].elements["date"].value,
@@ -270,13 +270,13 @@
 		newArticle.innerHTML = articleDay;
 		parentElem.appendChild(newArticle);
 	};
-	</script>
-	<script>
+	</script> -->
+<!-- 	<script>
 	function popupDelete() {
 		var articleAll = document.getElementById('artc_pop');
 		articleAll.parentNode.removeChild(articleAll);
 	};
-	</script>
+	</script> -->
 	<script src="js/common.js"></script>
 	<script src="js/calendar.js"></script>
 </body>
