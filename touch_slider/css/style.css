@@ -5,14 +5,14 @@ body, hmtl{background: #ecf0f1; font-family: 'Anton', sans-serif;}
 
 
 #wrapper{
-	width:100vw;
+	/*width:100vw;*/
 	height:100vh;
 	position:relative;
 	color:#fff;	
 }
 
 #slider-wrap{
-	width:100vw;
+	/*width:100vw;*/
 	height:100vh;
 	position:relative;
 	overflow:hidden;

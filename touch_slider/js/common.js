@@ -35,8 +35,11 @@ function pagination(){
 }
 pagination();
 	
+
+
 $(document).ready(function(){
 	
+	$.mobile.loading().hide();
 	//ширина слайдера зависит от количества слайдов
 	$('#slider-wrap ul#slider').width(sliderWidth*totalSlides);
 	
