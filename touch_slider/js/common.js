@@ -35,9 +35,7 @@ function pagination(){
 }
 pagination();
 	
-
 $(document).ready(function(){
-	
 	
 	//ширина слайдера зависит от количества слайдов
 	$('#slider-wrap ul#slider').width(sliderWidth*totalSlides);
@@ -56,6 +54,14 @@ $(document).ready(function(){
 	$(document).on('keydown', function(e) {
 		if (e.keyCode === 37 || e.keyCode === 40)  slideLeft();
 		else if (e.keyCode === 39 || e.keyCode === 38) slideRight();
+	});
+
+	$('#slider-wrap ul li').on('swipeleft', function(event) {
+		slideRight();
+	});
+
+	$('#slider-wrap ul li').on('swiperight', function(event) {
+		slideLeft();
 	});
 
 

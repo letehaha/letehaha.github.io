@@ -31,6 +31,7 @@ body, hmtl{background: #ecf0f1; font-family: 'Anton', sans-serif;}
 	position:relative;
 	width:100vw;
 	height:100vh;
+	outline: none;
 }
 #slider-wrap ul#slider li:first-child{
 	background: url('../img/8hYu9AK0CQI.jpg') center;
