@@ -52,6 +52,10 @@ $(document).ready(function(){
 	document.getElementById('next').onclick = slideRight;
 	//предыдущий слайд
 	document.getElementById('previous').onclick = slideLeft;
+
+	// window.onload = function() {
+	// 	document.getElementsByClassName('btns').style.background = "red";
+	// };
 	
 	//переключение слайдов по стрелкам
 	$(document).on('keydown', function(e){
@@ -75,8 +79,9 @@ $(document).ready(function(){
 		$('#slider-wrap ul li').on('swiperight', function(e) {
 			slideLeft();
 		});
+		$('.btns').css('background-color', "red");
 	} else{
-		false
+		// document.getElementsByClassName('btns').style.backgroundColor = "green";
 	};
 
 	//автоматическая прокрутка
