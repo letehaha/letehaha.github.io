@@ -79,9 +79,9 @@ $(document).ready(function(){
 		$('#slider-wrap ul li').on('swiperight', function(e) {
 			slideLeft();
 		});
-		$('.btns').css('background-color', "red");
+		$('.btns').css('background-color', "red"); //!!!!!!!!!!!
 	} else{
-		// document.getElementsByClassName('btns').style.backgroundColor = "green";
+		false
 	};
 
 	//автоматическая прокрутка
@@ -93,13 +93,5 @@ $(document).ready(function(){
 	   // document.getElementById('pagination-wrap').firstChild.className = 'active';
 	   $('#pagination-wrap ul').append(li); 
 	});
-
-	
-	//показать/спрятать кнопки когда hover
-	//пауза автоматической прокрутки когда hover
-	$('#slider-wrap').hover(
-	  function(){ $(this).addClass('active');}, //clearInterval(autoSlider); 
-	  function(){ $(this).removeClass('active');} //autoSlider = setInterval(slideRight, 3000);
-	);
 	
 });
