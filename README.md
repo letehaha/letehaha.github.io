@@ -7,6 +7,9 @@ layout PSD. No adaptive. View on width 1440px<br>
 [letehaha.github.io/Atlantida/blog/](http://letehaha.github.io/Atlantida/blog/)<br>
 [letehaha.github.io/Atlantida/blog/post_with_sidebar/](http://letehaha.github.io/Atlantida/blog/post_with_sidebar/index.html)<br>
 
+##frontend-test
+
+[letehaha.github.io/frontend-test/](http://letehaha.github.io/frontend-test/)
 
 ##MoGo
 PSD layout. No adaptive. View on width 1200px (http://goo.gl/jFVBty)
