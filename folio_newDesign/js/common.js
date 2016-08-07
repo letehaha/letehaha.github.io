@@ -45,4 +45,20 @@ $(function() {
 		$('.contact').css({"display":"flex"});
 		$('.main-socials').hide();
 	});
+
+
+	// $('.folio-work_intro p a').hover(function() {
+	// 	$('.folio-work_btn').css({
+	// 		"background-color":"rgba(3,156,253,1)",
+	// 		"color":"#fff",
+	// 		"font-weight": "300"
+	// 	})
+	// }, function() {
+	// 	$('.folio-work_btn').css({
+	// 		"background-color":"inherit",
+	// 		"color":"rgba(3,156,253,1)",
+	// 		"font-weight": "400"
+	// 	})
+	// });
+
 });
