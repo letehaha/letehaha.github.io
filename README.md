@@ -12,25 +12,31 @@ layout PSD. No adaptive. View on width 1440px<br>
 [letehaha.github.io/frontend-test/](http://letehaha.github.io/frontend-test/)
 
 ##MoGo
-PSD layout. No adaptive. View on width 1200px (http://goo.gl/jFVBty)
+PSD layout. Adaptive. View on width 1200px (http://goo.gl/jFVBty)
 
 [letehaha.github.io/MoGo/](http://letehaha.github.io/MoGo/)
 
 ##brandly
-PSD layout.
+PSD layout. Adaptive. View on width 1270px
 
 [letehaha.github.io/brandly/](http://letehaha.github.io/brandly/)
 
 ##inktattoo
-PSD layout.
+PSD layout. Adaptive. View on width 1270px
 
 [letehaha.github.io/inktattoo/](http://letehaha.github.io/inktattoo/)
 
 ##modern-look
-Layout PSD. No adaptive. View on width 1440px
+Layout PSD. Adaptive. View on width 1440px
 
 [letehaha.github.io/modern-look/](http://letehaha.github.io/modern-look/)
+
 ##modest
-PSD layout. No adaptive. View on width 1140px
+PSD layout. Adaptive. View on width 1140px
 
 [letehaha.github.io/modest/](http://letehaha.github.io/modest/)
+
+##maguwohost
+PSD layout. No adaptive. View on width 1440px
+
+[letehaha.github.io/maguwohost/](http://letehaha.github.io/maguwohost/)
