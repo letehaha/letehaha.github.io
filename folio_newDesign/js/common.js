@@ -46,6 +46,9 @@ $(function() {
 			$('.progress-bar-per').css({'width': '75%'});
 			$('.progress-bar-an').css({'width': '70%'});
 		}, 200);
+		setTimeout(function() {
+			$('.js-bar-count').countTo();
+		}, 300);
 	});
 
 	$('#page-3').click(function(e) {
@@ -94,10 +97,6 @@ $(function() {
 	  }
 	  $('.ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
 	  $('.ppc-percents span').html(percent + '%');
-
-	  setTimeout(function() {
-			$('.js-bar-count').countTo();
-		}, 300);
 
 	$("#contact-form").validationEngine('attach',{
 			promptPosition : "bottomLeft", maxErrorsPerField : 1,
