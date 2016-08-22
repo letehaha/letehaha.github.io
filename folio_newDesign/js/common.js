@@ -95,7 +95,9 @@ $(function() {
 	  $('.ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
 	  $('.ppc-percents span').html(percent + '%');
 
-
+	  setTimeout(function() {
+			$('.js-bar-count').countTo();
+		}, 300);
 
 	$("#contact-form").validationEngine('attach',{
 			promptPosition : "bottomLeft", maxErrorsPerField : 1,
