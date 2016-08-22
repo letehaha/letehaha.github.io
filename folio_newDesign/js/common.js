@@ -38,6 +38,14 @@ $(function() {
 			'padding':'15px',
 			'margin-bottom':'0px'
 		});
+		setTimeout(function(){
+			$('.progress-bar-sass').css({'width': '75%'});
+			$('.progress-bar-boot').css({'width': '65%'});
+			$('.progress-bar-jade').css({'width': '45%'});
+			$('.progress-bar-git').css({'width': '85%'});
+			$('.progress-bar-per').css({'width': '75%'});
+			$('.progress-bar-an').css({'width': '70%'});
+		}, 200);
 	});
 
 	$('#page-3').click(function(e) {
@@ -55,14 +63,14 @@ $(function() {
 				'-webkit-transform': 'translateX(0)',
 				'transform' : 'translateX(0)'
 			});
-		}, 200);
+		}, 100);
 		setTimeout(function(){
 			$('.contact-left_copy').css({
 				'opacity': '1',
-				'-webkit-transform': 'translatey(0)',
-				'transform' : 'translatey(0)'
+				'-webkit-transform': 'translateY(0)',
+				'transform' : 'translateY(0)'
 			});
-		}, 200);
+		}, 100);
 	});
 
 	function folioChangeStyles(el, mouseenter) {
@@ -76,6 +84,18 @@ $(function() {
 	$('.folio-work').on('mouseenter mouseout', 'a:first-child', function(e) {
 	  folioChangeStyles(e.delegateTarget, (e.type === 'mouseenter'));
 	});
+
+
+	var $ppc = $('.progress-pie-chart'),
+	    percent = parseInt($ppc.data('percent')),
+	    deg = 360*percent/100;
+	  if (percent > 50) {
+	    $ppc.addClass('gt-50');
+	  }
+	  $('.ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
+	  $('.ppc-percents span').html(percent + '%');
+
+
 
 	$("#contact-form").validationEngine('attach',{
 			promptPosition : "bottomLeft", maxErrorsPerField : 1,
@@ -106,5 +126,37 @@ $(function() {
 				}
 			}
 		});
+
+	$('#contact-form').submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			url: 'https://formspree.io/letehaha@gmail.com', 
+  		method: 'POST',
+  		data: $(this).serialize(),
+  		dataType: 'json'
+		}).done(function() {
+			var $this = $('.contact-form_submit');
+			if($this.hasClass('active') || $this.hasClass('success')) {
+				return false;
+			}
+			$this.addClass('active');
+			setTimeout(function() {
+				$this.addClass('loader');
+			}, 125);
+			setTimeout(function() {
+				$this.removeClass('loader active');
+				$this.val('Готово');
+				$this.addClass('success animated pulse');
+			}, 1600);
+			setTimeout(function() {
+				$this.val('Отправить');
+				$this.removeClass('success animated pulse');
+				$this.blur();
+			}, 2900);
+			setTimeout(function() {
+				$('#contact-form').trigger('reset');
+			}, 2200);
+		});
+	});
 
 });

@@ -21,6 +21,8 @@
 	display: block;
 	cursor: pointer;
 	text-align: left;
+	user-select:none;
+	/*top: 45px !important;*/
 }
 
 .formError.inline {
