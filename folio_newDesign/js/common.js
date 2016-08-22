@@ -46,9 +46,8 @@ $(function() {
 			$('.progress-bar-per').css({'width': '75%'});
 			$('.progress-bar-an').css({'width': '70%'});
 		}, 200);
-		setTimeout(function() {
-			$('.js-bar-count').countTo();
-		}, 300);
+		// setTimeout(function() {
+		$('.js-bar-count').countTo();
 	});
 
 	$('#page-3').click(function(e) {
