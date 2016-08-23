@@ -1,5 +1,4 @@
 $(function() {
-
 	$('.folio-nav_list li').click(function(e) {
 		var all_another = $('.folio-nav_list li');
 		all_another.removeClass('active');
@@ -50,161 +49,152 @@ $(function() {
       var counterUp = $('.js-bar-count-sass');
       var dataBar = $('.js-bar-count-sass').data('count');
       counterUp.counter({
-        duration: 1400,
+        duration: 1500,
         countTo: dataBar,
         placeholder: 0,
         easing: 'easeOutQuad'
       });
-		}, 200);
+		}, 100);
 		setTimeout(function(){
       var counterUp = $('.js-bar-count-boot');
       var dataBar = $('.js-bar-count-boot').data('count');
       counterUp.counter({
-        duration: 1400,
+        duration: 1500,
         countTo: dataBar,
         placeholder: 0,
         easing: 'easeOutQuad'
       });
-		}, 200);
+		}, 100);
 		setTimeout(function(){
       var counterUp = $('.js-bar-count-jade');
       var dataBar = $('.js-bar-count-jade').data('count');
       counterUp.counter({
-        duration: 1400,
+        duration: 1500,
         countTo: dataBar,
         placeholder: 0,
         easing: 'easeOutQuad'
       });
-		}, 200);
+		}, 100);
 		setTimeout(function(){
       var counterUp = $('.js-bar-count-git');
       var dataBar = $('.js-bar-count-git').data('count');
       counterUp.counter({
-        duration: 1400,
+        duration: 1500,
         countTo: dataBar,
         placeholder: 0,
         easing: 'easeOutQuad'
       });
-		}, 200);
+		}, 100);
 		setTimeout(function(){
       var counterUp = $('.js-bar-count-per');
       var dataBar = $('.js-bar-count-per').data('count');
       counterUp.counter({
-        duration: 1400,
+        duration: 1500,
         countTo: dataBar,
         placeholder: 0,
         easing: 'easeOutQuad'
       });
-		}, 200);
+		}, 100);
 		setTimeout(function(){
       var counterUp = $('.js-bar-count-an');
       var dataBar = $('.js-bar-count-an').data('count');
       counterUp.counter({
-        duration: 1400,
+        duration: 1500,
         countTo: dataBar,
         placeholder: 0,
         easing: 'easeOutQuad'
       });
+		}, 100);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-html');
+      var dataBar = $('.js-bar-count-html').data('count');
+      counterUp.counter({
+        duration: 1500,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 100);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-css');
+      var dataBar = $('.js-bar-count-css').data('count');
+      counterUp.counter({
+        duration: 1500,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 100);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-js');
+      var dataBar = $('.js-bar-count-js').data('count');
+      counterUp.counter({
+        duration: 1500,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 100);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-jquery');
+      var dataBar = $('.js-bar-count-jquery').data('count');
+      counterUp.counter({
+        duration: 1500,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 100);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-psh');
+      var dataBar = $('.js-bar-count-psh').data('count');
+      counterUp.counter({
+        duration: 1500,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 100);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-wp');
+      var dataBar = $('.js-bar-count-wp').data('count');
+      counterUp.counter({
+        duration: 1500,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 100);
+		setTimeout(function(){
+			$('.js-svg-bar-html circle:nth-child(2)').css({
+				'stroke-dashoffset' : '-354'
+			})
 		}, 200);
-		// setTimeout(function(){
-  //     var counterUp = $('.js-bar-count-html');
-  //     var dataBar = $('.js-bar-count-html').data('count');
-  //     counterUp.counter({
-  //       duration: 1400,
-  //       countTo: dataBar,
-  //       placeholder: 0,
-  //       easing: 'easeOutQuad'
-  //     });
-		// }, 200);
-		// setTimeout(function(){
-  //     var counterUp = $('.js-bar-count-css');
-  //     var dataBar = $('.js-bar-count-css').data('count');
-  //     counterUp.counter({
-  //       duration: 1400,
-  //       countTo: dataBar,
-  //       placeholder: 0,
-  //       easing: 'easeOutQuad'
-  //     });
-		// }, 200);
-		// setTimeout(function(){
-  //     var counterUp = $('.js-bar-count-js');
-  //     var dataBar = $('.js-bar-count-js').data('count');
-  //     counterUp.counter({
-  //       duration: 1400,
-  //       countTo: dataBar,
-  //       placeholder: 0,
-  //       easing: 'easeOutQuad'
-  //     });
-		// }, 200);
-		// setTimeout(function(){
-  //     var counterUp = $('.js-bar-count-jquery');
-  //     var dataBar = $('.js-bar-count-jquery').data('count');
-  //     counterUp.counter({
-  //       duration: 1400,
-  //       countTo: dataBar,
-  //       placeholder: 0,
-  //       easing: 'easeOutQuad'
-  //     });
-		// }, 200);
-		// setTimeout(function(){
-  //     var counterUp = $('.js-bar-count-psh');
-  //     var dataBar = $('.js-bar-count-psh').data('count');
-  //     counterUp.counter({
-  //       duration: 1400,
-  //       countTo: dataBar,
-  //       placeholder: 0,
-  //       easing: 'easeOutQuad'
-  //     });
-		// }, 200);
-		// setTimeout(function(){
-  //     var counterUp = $('.js-bar-count-wp');
-  //     var dataBar = $('.js-bar-count-wp').data('count');
-  //     counterUp.counter({
-  //       duration: 1400,
-  //       countTo: dataBar,
-  //       placeholder: 0,
-  //       easing: 'easeOutQuad'
-  //     });
-		// }, 200);
-
-		// setTimeout(function(){
-		// 	var dataBarSvg = $('.js-svg-bar-html').data('count');
-		// 	$('.js-svg-bar-html').counter({
-		// 		duration: 1400,
-		// 		countTo: 95,
-		// 		placeholder: 0,
-		// 		easing: 'easeOutQuad',
-		// 		onComplete: function (val) {
-		// 			$('.js-svg-bar-html').attr('percent', val);
-		// 		}
-		// 	});
-		// }, 200);
-
-		// setTimeout(function(){
-  //     var counterUp = document.getElementsByClassName('js-bar-count-an');
-  //     for (var i = 0; i < counterUp.length; i++) {
-	 //      var dataBar = counterUp[i].data('count');
-	 //      counterUp[i].counter({
-	 //        duration: 1400,
-	 //        countTo: dataBar,
-	 //        placeholder: 0,
-	 //        easing: 'easeOutQuad'
-	 //      });
-  //     };
-		// }, 200);
-
-		// setTimeout(function(){
-		// 	var dataBarSvg = $('.svg-bar').data('count');
-		// 	$('.svg-bar').counter({
-		// 		duration: 1400,
-		// 		countTo: dataBarSvg,
-		// 		placeholder: 0,
-		// 		easing: 'easeOutQuad',
-		// 		onComplete: function (val) {
-		// 			 $(this).attr('percent', val);
-		// 		}
-		// 	});
-		// }, 200);
+		setTimeout(function(){
+			$('.js-svg-bar-css circle:nth-child(2)').css({
+				'stroke-dashoffset' : '-335.7'
+			})
+		}, 200);
+		setTimeout(function(){
+			$('.js-svg-bar-js circle:nth-child(2)').css({
+				'stroke-dashoffset' : '-205.38'
+			})
+		}, 200);
+		setTimeout(function(){
+			$('.js-svg-bar-jquery circle:nth-child(2)').css({
+				'stroke-dashoffset' : '-242.72'
+			})
+		}, 200);
+		setTimeout(function(){
+			$('.js-svg-bar-psh circle:nth-child(2)').css({
+				'stroke-dashoffset' : '-261.39'
+			})
+		}, 200);
+		setTimeout(function(){
+			$('.js-svg-bar-wp circle:nth-child(2)').css({
+				'stroke-dashoffset' : '-112.02'
+			})
+		}, 200);
 	});
 
 	$('#page-3').click(function(e) {
@@ -243,16 +233,6 @@ $(function() {
 	$('.folio-work').on('mouseenter mouseout', 'a:first-child', function(e) {
 	  folioChangeStyles(e.delegateTarget, (e.type === 'mouseenter'));
 	});
-
-
-	var $ppc = $('.progress-pie-chart'),
-	    percent = parseInt($ppc.data('percent')),
-	    deg = 360*percent/100;
-	  if (percent > 50) {
-	    $ppc.addClass('gt-50');
-	  }
-	  $('.ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
-	  $('.ppc-percents span').html(percent + '%');
 
 	$("#contact-form").validationEngine('attach',{
 			promptPosition : "bottomLeft", maxErrorsPerField : 1,
@@ -309,7 +289,7 @@ $(function() {
 				$this.val('Отправить');
 				$this.removeClass('success animated pulse');
 				$this.blur();
-			}, 2900);
+			}, 3400);
 			setTimeout(function() {
 				$('#contact-form').trigger('reset');
 			}, 2200);
