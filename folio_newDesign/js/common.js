@@ -46,8 +46,165 @@ $(function() {
 			$('.progress-bar-per').css({'width': '75%'});
 			$('.progress-bar-an').css({'width': '70%'});
 		}, 200);
-		// setTimeout(function() {
-		$('.js-bar-count').countTo();
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-sass');
+      var dataBar = $('.js-bar-count-sass').data('count');
+      counterUp.counter({
+        duration: 1400,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 200);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-boot');
+      var dataBar = $('.js-bar-count-boot').data('count');
+      counterUp.counter({
+        duration: 1400,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 200);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-jade');
+      var dataBar = $('.js-bar-count-jade').data('count');
+      counterUp.counter({
+        duration: 1400,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 200);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-git');
+      var dataBar = $('.js-bar-count-git').data('count');
+      counterUp.counter({
+        duration: 1400,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 200);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-per');
+      var dataBar = $('.js-bar-count-per').data('count');
+      counterUp.counter({
+        duration: 1400,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 200);
+		setTimeout(function(){
+      var counterUp = $('.js-bar-count-an');
+      var dataBar = $('.js-bar-count-an').data('count');
+      counterUp.counter({
+        duration: 1400,
+        countTo: dataBar,
+        placeholder: 0,
+        easing: 'easeOutQuad'
+      });
+		}, 200);
+		// setTimeout(function(){
+  //     var counterUp = $('.js-bar-count-html');
+  //     var dataBar = $('.js-bar-count-html').data('count');
+  //     counterUp.counter({
+  //       duration: 1400,
+  //       countTo: dataBar,
+  //       placeholder: 0,
+  //       easing: 'easeOutQuad'
+  //     });
+		// }, 200);
+		// setTimeout(function(){
+  //     var counterUp = $('.js-bar-count-css');
+  //     var dataBar = $('.js-bar-count-css').data('count');
+  //     counterUp.counter({
+  //       duration: 1400,
+  //       countTo: dataBar,
+  //       placeholder: 0,
+  //       easing: 'easeOutQuad'
+  //     });
+		// }, 200);
+		// setTimeout(function(){
+  //     var counterUp = $('.js-bar-count-js');
+  //     var dataBar = $('.js-bar-count-js').data('count');
+  //     counterUp.counter({
+  //       duration: 1400,
+  //       countTo: dataBar,
+  //       placeholder: 0,
+  //       easing: 'easeOutQuad'
+  //     });
+		// }, 200);
+		// setTimeout(function(){
+  //     var counterUp = $('.js-bar-count-jquery');
+  //     var dataBar = $('.js-bar-count-jquery').data('count');
+  //     counterUp.counter({
+  //       duration: 1400,
+  //       countTo: dataBar,
+  //       placeholder: 0,
+  //       easing: 'easeOutQuad'
+  //     });
+		// }, 200);
+		// setTimeout(function(){
+  //     var counterUp = $('.js-bar-count-psh');
+  //     var dataBar = $('.js-bar-count-psh').data('count');
+  //     counterUp.counter({
+  //       duration: 1400,
+  //       countTo: dataBar,
+  //       placeholder: 0,
+  //       easing: 'easeOutQuad'
+  //     });
+		// }, 200);
+		// setTimeout(function(){
+  //     var counterUp = $('.js-bar-count-wp');
+  //     var dataBar = $('.js-bar-count-wp').data('count');
+  //     counterUp.counter({
+  //       duration: 1400,
+  //       countTo: dataBar,
+  //       placeholder: 0,
+  //       easing: 'easeOutQuad'
+  //     });
+		// }, 200);
+
+		// setTimeout(function(){
+		// 	var dataBarSvg = $('.js-svg-bar-html').data('count');
+		// 	$('.js-svg-bar-html').counter({
+		// 		duration: 1400,
+		// 		countTo: 95,
+		// 		placeholder: 0,
+		// 		easing: 'easeOutQuad',
+		// 		onComplete: function (val) {
+		// 			$('.js-svg-bar-html').attr('percent', val);
+		// 		}
+		// 	});
+		// }, 200);
+
+		// setTimeout(function(){
+  //     var counterUp = document.getElementsByClassName('js-bar-count-an');
+  //     for (var i = 0; i < counterUp.length; i++) {
+	 //      var dataBar = counterUp[i].data('count');
+	 //      counterUp[i].counter({
+	 //        duration: 1400,
+	 //        countTo: dataBar,
+	 //        placeholder: 0,
+	 //        easing: 'easeOutQuad'
+	 //      });
+  //     };
+		// }, 200);
+
+		// setTimeout(function(){
+		// 	var dataBarSvg = $('.svg-bar').data('count');
+		// 	$('.svg-bar').counter({
+		// 		duration: 1400,
+		// 		countTo: dataBarSvg,
+		// 		placeholder: 0,
+		// 		easing: 'easeOutQuad',
+		// 		onComplete: function (val) {
+		// 			 $(this).attr('percent', val);
+		// 		}
+		// 	});
+		// }, 200);
 	});
 
 	$('#page-3').click(function(e) {
