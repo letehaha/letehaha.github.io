@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'AllerBold';
+  src: url('aller_bold.woff2') format('woff2'),
+       url('aller_bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AllerBold_Italic';
+  src: url('aller_bolditalic.woff2') format('woff2'),
+       url('aller_bolditalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Aller_Italic';
+  src: url('aller_italic.woff2') format('woff2'),
+       url('aller_italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'AllerLight';
+  src: url('aller_light.woff2') format('woff2'),
+       url('aller_light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AllerLight_Italic';
+  src: url('aller_lightitalic.woff2') format('woff2'),
+       url('aller_lightitalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'AllerRegular';
+  src: url('aller_regular.woff2') format('woff2'),
+       url('aller_regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AllerDisplay';
+  src: url('allerdisplay.woff2') format('woff2'),
+       url('allerdisplay.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
