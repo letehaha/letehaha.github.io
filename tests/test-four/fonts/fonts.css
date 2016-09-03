@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'SF_Display_Light';
+    src: url('sf-ui-display-light.woff2') format('woff2'),
+         url('sf-ui-display-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF_Display_Regular';
+    src: url('sf-ui-display-regular.woff2') format('woff2'),
+         url('sf-ui-display-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF_Display_Medium';
+    src: url('sf-ui-display-medium.woff2') format('woff2'),
+         url('sf-ui-display-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF_Text_Light';
+    src: url('sf-ui-text-light.woff2') format('woff2'),
+         url('sf-ui-text-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF_Text_LightItalic';
+    src: url('sf-ui-text-lightitalic.woff2') format('woff2'),
+         url('sf-ui-text-lightitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF_Text_Regular';
+    src: url('sf-ui-text-regular.woff2') format('woff2'),
+         url('sf-ui-text-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal
+}
