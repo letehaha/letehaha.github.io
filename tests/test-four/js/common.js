@@ -22,10 +22,16 @@ $(function() {
 			$('.services-title').click(
 				function(){
 					$('.services-list').stop().slideToggle(400);
+				},
+				function(){
+					$('.services-list').stop().slideToggle(400);
 				}
 			);
 
 			$('.projects-title').click(
+				function(){
+					$('.projects-list').stop().slideToggle(400);
+				},
 				function(){
 					$('.projects-list').stop().slideToggle(400);
 				}
