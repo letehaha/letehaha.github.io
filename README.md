@@ -7,10 +7,6 @@ layout PSD. No adaptive. View on width 1440px<br>
 [letehaha.github.io/Atlantida/blog/](http://letehaha.github.io/Atlantida/blog/)<br>
 [letehaha.github.io/Atlantida/blog/post_with_sidebar/](http://letehaha.github.io/Atlantida/blog/post_with_sidebar/index.html)<br>
 
-##frontend-test
-
-[letehaha.github.io/frontend-test/](http://letehaha.github.io/frontend-test/)
-
 ##MoGo
 PSD layout. Adaptive. View on width 1200px (http://goo.gl/jFVBty)
 
@@ -40,3 +36,11 @@ PSD layout. Adaptive. View on width 1140px
 PSD layout. No adaptive. View on width 1440px
 
 [letehaha.github.io/maguwohost/](http://letehaha.github.io/maguwohost/)
+
+#Test works
+
+[letehaha.github.io/tests/test-one/](http://letehaha.github.io/tests/test-one/)
+[letehaha.github.io/tests/test-two/](http://letehaha.github.io/tests/test-two/)
+[letehaha.github.io/tests/test-three/](http://letehaha.github.io/tests/test-three/)
+[letehaha.github.io/tests/test-four/](http://letehaha.github.io/tests/test-four/)
+[letehaha.github.io/tests/test-five/](http://letehaha.github.io/tests/test-five/)
