@@ -1,0 +1,151 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$menu-user-icon-name: 'menu-user-icon';
+$menu-user-icon-x: 0px;
+$menu-user-icon-y: 0px;
+$menu-user-icon-offset-x: 0px;
+$menu-user-icon-offset-y: 0px;
+$menu-user-icon-width: 19px;
+$menu-user-icon-height: 17px;
+$menu-user-icon-total-width: 56px;
+$menu-user-icon-total-height: 50px;
+$menu-user-icon-image: 'sprite.png';
+$menu-user-icon: (0px, 0px, 0px, 0px, 19px, 17px, 56px, 50px, 'sprite.png', 'menu-user-icon', );
+$mob-cart-icon-name: 'mob-cart-icon';
+$mob-cart-icon-x: 39px;
+$mob-cart-icon-y: 0px;
+$mob-cart-icon-offset-x: -39px;
+$mob-cart-icon-offset-y: 0px;
+$mob-cart-icon-width: 17px;
+$mob-cart-icon-height: 17px;
+$mob-cart-icon-total-width: 56px;
+$mob-cart-icon-total-height: 50px;
+$mob-cart-icon-image: 'sprite.png';
+$mob-cart-icon: (39px, 0px, -39px, 0px, 17px, 17px, 56px, 50px, 'sprite.png', 'mob-cart-icon', );
+$mob-home-icon-name: 'mob-home-icon';
+$mob-home-icon-x: 19px;
+$mob-home-icon-y: 0px;
+$mob-home-icon-offset-x: -19px;
+$mob-home-icon-offset-y: 0px;
+$mob-home-icon-width: 20px;
+$mob-home-icon-height: 16px;
+$mob-home-icon-total-width: 56px;
+$mob-home-icon-total-height: 50px;
+$mob-home-icon-image: 'sprite.png';
+$mob-home-icon: (19px, 0px, -19px, 0px, 20px, 16px, 56px, 50px, 'sprite.png', 'mob-home-icon', );
+$mob-search-icon-name: 'mob-search-icon';
+$mob-search-icon-x: 39px;
+$mob-search-icon-y: 17px;
+$mob-search-icon-offset-x: -39px;
+$mob-search-icon-offset-y: -17px;
+$mob-search-icon-width: 16px;
+$mob-search-icon-height: 16px;
+$mob-search-icon-total-width: 56px;
+$mob-search-icon-total-height: 50px;
+$mob-search-icon-image: 'sprite.png';
+$mob-search-icon: (39px, 17px, -39px, -17px, 16px, 16px, 56px, 50px, 'sprite.png', 'mob-search-icon', );
+$mob-tel-icon-name: 'mob-tel-icon';
+$mob-tel-icon-x: 0px;
+$mob-tel-icon-y: 33px;
+$mob-tel-icon-offset-x: 0px;
+$mob-tel-icon-offset-y: -33px;
+$mob-tel-icon-width: 16px;
+$mob-tel-icon-height: 17px;
+$mob-tel-icon-total-width: 56px;
+$mob-tel-icon-total-height: 50px;
+$mob-tel-icon-image: 'sprite.png';
+$mob-tel-icon: (0px, 33px, 0px, -33px, 16px, 17px, 56px, 50px, 'sprite.png', 'mob-tel-icon', );
+$mob-user-icon-name: 'mob-user-icon';
+$mob-user-icon-x: 0px;
+$mob-user-icon-y: 17px;
+$mob-user-icon-offset-x: 0px;
+$mob-user-icon-offset-y: -17px;
+$mob-user-icon-width: 19px;
+$mob-user-icon-height: 16px;
+$mob-user-icon-total-width: 56px;
+$mob-user-icon-total-height: 50px;
+$mob-user-icon-image: 'sprite.png';
+$mob-user-icon: (0px, 17px, 0px, -17px, 19px, 16px, 56px, 50px, 'sprite.png', 'mob-user-icon', );
+$spritesheet-width: 56px;
+$spritesheet-height: 50px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($menu-user-icon, $mob-cart-icon, $mob-home-icon, $mob-search-icon, $mob-tel-icon, $mob-user-icon, );
+$spritesheet: (56px, 50px, 'sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../sprites/#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,132 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.top-row__search-input{width: 395px;}
+}
+
+@media only screen and (max-width : 1100px) {
+	.top-row__search-input{width: 295px;}
+	.top-row__logo{max-width: 220px}
+	.list__item-link{font-size: .9em;}
+}
+
+@media only screen and (max-width : 1000px) {
+	.top-menu{
+		border: 0;
+		flex-direction: column-reverse;
+		padding: 0;
+	}
+	.top-nav{
+		width: 100%;
+		padding: 20px 15px;
+		border-top: 1px solid #b8b8bd;
+		border-bottom: 1px solid #b8b8bd;
+	}
+	.top-menu__info{
+		padding: 0 15px;
+		margin-left: auto;
+		margin-bottom: 10px;
+	}
+	.top-row__tel{font-size: 1em;}
+	.top-row__info{font-size: .775em;}
+	.main-slide__content h2{font-size: 2.2em;}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.top-row__logo{max-width: 200px}
+	.top-row__search-input{width: 220px;font-size: .825em;}
+	.top-row__logo-text{font-size: .75em; margin-top: 5px;}
+}
+@media only screen and (max-width : 900px) {
+	.top-row__logo{max-width: 200px}
+	.top-row__search-input{width: 220px;font-size: .825em;}
+	.top-row__logo-text{font-size: .75em; margin-top: 5px;}
+	.main-slide__content h2{font-size: 2em;}
+}
+@media only screen and (max-width : 800px) {
+	.main-slide__content h2{font-size: 1.5em;}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.top-row__logo{max-width: 180px}
+	.top-row__tel{font-size: .95em;}
+	.top-row__info,
+	.top-menu__info-product-quant,
+	.top-row__search-input{font-size: .675em;}
+	.top-row__search-input, .top-row__tel, .top-row__info{margin-bottom: 10px;}
+	.js-count{font-size: 1.5em;width: 21px;height: 21px;}
+	.top-menu__info-product-cost,
+	.top-menu__info-account{font-size: .8em;}
+	.top-menu__info-product-cart{font-size: 20px;}
+  .list__item-link{font-size: .8em;}
+  .slick-next i{right: 5px;}
+  .slick-prev i{left: 5px;}
+  .slick-prev i, .slick-next i{top: calc(50% - 10px);}
+  .slick-prev, .slick-next{
+  	width: 22px;
+  	height: 66px;
+  	top: calc(50% - 33px);
+    font-size: 22px;
+  }
+  .slick-dots li button,
+  .slick-dots li button:before{width: 15px;height: 15px;}
+}
+@media only screen and (max-width : 700px) {
+	.top-row__tel{display: none;}
+}
+@media only screen and (max-width : 650px) {
+	.top-nav__list{flex-direction: column;}
+	.list__item{margin-right: auto;margin-bottom: 10px;}
+	.top-nav__dropdown{bottom: -300px;left: 50px;}
+	.dropdown__item-link{font-size: .8em;}
+	.top-nav__dropdown{width: 200px;}
+	.dropdown__item{padding: 5px 25px;}
+	.dropdown__item:before{left: 10px;}
+	.dropdown__dropdown{width: 180px;right: -170px;}
+	.dropdown__title{margin-left: 5px;}
+}
+
+@media only screen and (max-width : 600px) {
+	.top-row__info{display: none;}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 500px) {
+	.top-row{padding: 15px 20px;}
+	.top-row__search{margin: 0; margin-left: auto;}
+	.top-row__search-input{width: 195px;padding-right: 25px;}
+	.main-slide__content{width: 60%;}
+	.main-slide__content h2{font-size: 1em; line-height: 1.3;}
+	.top-nav__dropdown{width: 180px;}
+	.dropdown__item{padding: 5px 20px;}
+	.dropdown__item:before{left: 6px;}
+}
+@media only screen and (min-width : 431px) {
+	.top-nav{display: block !important;}
+}
+@media only screen and (max-width : 430px) {
+	.top-row__search,
+	.top-menu__info,.top-nav{display: none;}
+	.header-wrapper{display: flex;flex-direction: column-reverse;}
+	.toggle-menu{display: block;}
+	.top-nav__list{flex-direction: column;}
+	.list__item{padding: 10px;}
+	.list__item:first-child .list__item-link i{display: none;}
+	.list__item:first-child:hover .top-nav__dropdown{display: none;}
+	header{margin: 0;}
+	.top-row__logo{max-width: 190px;}
+	.main-slide__wrapper{
+		background: url('../img/slider-mobl.jpg') center bottom no-repeat;
+		max-height: 125px;
+		background-size: cover;
+	}
+	.main-slide__content{
+		padding: 5px 10px;
+		margin-left: 30px;
+	}
+	.slick-dots{display: none !important;}
+	.slick-prev, .slick-next{width: 20px;height: 30px;top: calc(50% - 15px);}
+	.mob-menu{display: flex; width: 100%;}
+	.mob-menu__tabs{display: flex; width: 100%;}
+	.mob-menu__tab{display: flex;}
+}
