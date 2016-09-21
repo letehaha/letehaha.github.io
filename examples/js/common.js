@@ -1,9 +1,17 @@
 $(function() {
+
 	var bodyPage = $('body');
+
+// page navigation
 
 	bodyPage.sectionScroll();
 
-// функционал показа кнопки ВВЕРХ
+//******************
+
+
+
+// showing button Up
+
 	var arrowTop = document.querySelector('#page-scroll-top');
 
 	function btnScrollTop(e){
@@ -19,7 +27,8 @@ $(function() {
 //*************
 
 
-// // прилипающее меню
+
+// stick menu
 
 	var topNavigation = document.getElementById('nav-wrapper');
 
@@ -33,27 +42,42 @@ $(function() {
 
 	document.addEventListener('scroll', onScroller);
 
-//*************
+	//*************
 	
-	
+
+
+	// button Up
+
 	var bodyScrollArrows = $('html,body');
 
-	$('#page-scroll-top').click(function(e) { // кнопка вверх
+	$('#page-scroll-top').click(function(e) {
   	e.preventDefault();
 		bodyScrollArrows.stop().animate({ scrollTop: $('#header').offset().top }, 500);
 	});
 
-	$('#btn-down').click(function(e) { // кнопка вниз
+	//****************
+
+
+
+	// button Down
+
+	$('#btn-down').click(function(e) {
   	e.preventDefault();
 		bodyScrollArrows.stop().animate({ scrollTop: $('#scrollto-section-1').offset().top }, 400);
 	});
+
+	//****************
+
+
+
+	// open burger-menu
 
 	var mainBurgerMenu = $('.main-burger-menu'),
 			bulletsContainer = $('.bullets-container'),
 			slideContent = $('.slide-content'),
 			overfloWrapper = $('.overflow-wrapper');
 
-	$('#burger-top').click(function(e) { //открытие главного меню
+	$('#burger-top').click(function(e) {
 		slideContent.css({transform: 'translateX(-60%)'})
 		overfloWrapper.addClass('overflow-wrapper--hidden');
 		mainBurgerMenu.css({width: '60%'});
@@ -62,7 +86,13 @@ $(function() {
   	e.preventDefault();
 	});
 
-	$('#close-btn-nav').click(function(e) { //закрытие главного меню
+	//****************
+
+
+
+	// close burger-menu
+
+	$('#close-btn-nav').click(function(e) {
 		slideContent.css({transform: 'inherit'})
 		overfloWrapper.removeClass('overflow-wrapper--hidden');
 		mainBurgerMenu.css({width: '0'});
@@ -71,15 +101,30 @@ $(function() {
   	e.preventDefault();
 	});
 
+	//****************
+
+
+
+	// effect elements list in open-burger menu
+
 	$('.burger-panel__elem').hover(function() {
 		$(this).children('.burger-panel__list').slideToggle();
 	});
 
+	//****************
+
+
+
+	//use function fixmenu
+
 	$(".nav-wrapper").fixmenu();
+
+	//****************
+
 });
 
 $.fn.fixmenu = function() {
-    //фикс топ меню при скролле
+  // fix menu on top where scrolling
 	var menuSelector = $(this);   
 	menuSelector.wrap("<div class='top-menu-container' style='" + "min-height:" + menuSelector.height() + "px;'></div");
 	sticky();
@@ -91,17 +136,20 @@ $.fn.fixmenu = function() {
 	});
 
 	function sticky() {
+
  		var st = $(this).scrollTop();
+
 		var scrollTop = $(document).scrollTop();
+		// if height page < 350px
 		if (scrollTop < 350) {
 			menuSelector.addClass('nav-wrapper');
 			return
 		}   
 		if (st > scrollPos){
-		//если вкролл вниз
+		// if scrolling down
 			menuSelector.removeClass('nav-wrapper');
 		} else {
-		//если скролл вверх
+		// if scrolling up and height page < 650px
 			if (scrollTop < 650) {
 				menuSelector.removeClass('nav-wrapper');
 				return
@@ -111,6 +159,3 @@ $.fn.fixmenu = function() {
 	scrollPos = st;
 	}
 }
-
-
-  
