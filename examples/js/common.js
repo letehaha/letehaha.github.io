@@ -19,37 +19,19 @@ $(function() {
 //*************
 
 
-// функционал скрытия верхнего нава
+// // прилипающее меню
 
-	var topNavigation = document.querySelector('#nav-wrapper');
+	var topNavigation = document.getElementById('nav-wrapper');
 
-	function hideTopNav(e){
-		if(document.body.scrollTop > 300){
-			topNavigation.classList.add('top-nav-menu-close');
+	function onScroller() {
+		if(window.pageYOffset > 650){
+			setTimeout(function(){topNavigation.classList.add('nav-wrapper--bgc')}, 300);
 		} else{
-			topNavigation.classList.remove('top-nav-menu-close');
+			setTimeout(function(){topNavigation.classList.remove('nav-wrapper--bgc')}, 300);
 		}
-	};
-
-	document.addEventListener('scroll', hideTopNav);
-
-//**************
-
-// прилипающее меню
-
-var prevPosition = 700;
-
-function onScroller() {
-	var st = $(this).scrollTop();
-	if (st > prevPosition) {
-	 topNavigation.classList.add('top-nav-menu-close');
-	} else {
-	 topNavigation.classList.remove('top-nav-menu-close');
 	}
-	prevPosition = st;
-}
 
-document.addEventListener('scroll', onScroller);
+	document.addEventListener('scroll', onScroller);
 
 //*************
 	
@@ -81,7 +63,7 @@ document.addEventListener('scroll', onScroller);
 	});
 
 	$('#close-btn-nav').click(function(e) { //закрытие главного меню
-		slideContent.css({transform: 'translateX(0)'})
+		slideContent.css({transform: 'inherit'})
 		overfloWrapper.removeClass('overflow-wrapper--hidden');
 		mainBurgerMenu.css({width: '0'});
 		bulletsContainer.css({display: 'flex'});
@@ -93,4 +75,42 @@ document.addEventListener('scroll', onScroller);
 		$(this).children('.burger-panel__list').slideToggle();
 	});
 
+	$(".nav-wrapper").fixmenu();
 });
+
+$.fn.fixmenu = function() {
+    //фикс топ меню при скролле
+	var menuSelector = $(this);   
+	menuSelector.wrap("<div class='top-menu-container' style='" + "min-height:" + menuSelector.height() + "px;'></div");
+	sticky();
+
+	var scrollPos = 0;
+
+	$(window).scroll(function(){
+		sticky()
+	});
+
+	function sticky() {
+ 		var st = $(this).scrollTop();
+		var scrollTop = $(document).scrollTop();
+		if (scrollTop < 350) {
+			menuSelector.addClass('nav-wrapper');
+			return
+		}   
+		if (st > scrollPos){
+		//если вкролл вниз
+			menuSelector.removeClass('nav-wrapper');
+		} else {
+		//если скролл вверх
+			if (scrollTop < 650) {
+				menuSelector.removeClass('nav-wrapper');
+				return
+			}  
+		menuSelector.addClass('nav-wrapper', 'nav-wrapper--bgc');
+		}
+	scrollPos = st;
+	}
+}
+
+
+  

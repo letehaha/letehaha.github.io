@@ -37,10 +37,21 @@ section:nth-child(even){
 	align-items: center;
 	padding: 30px 25px;
 	width: 100%;
-	// transition: .1s;
+	// transition: .3s;
+	opacity: 1;
+	animation-name: menu;
+  animation-duration:0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes menu {
+  from { transform:translateY(-100%)  }
+  to { transform:translateY(0)  }
 }
 .top-nav-menu-close{
-	transform: translateY(-90px);
+	transform: translateY(-100px);
+}
+.nav-wrapper--bgc{
+	background-color: rgba(102, 51, 153, .6);
 }
 .top-nav__list{
 	display: flex;
