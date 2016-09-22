@@ -154,7 +154,7 @@ $.fn.fixmenu = function() {
 			menuSelector.removeClass('nav-wrapper');
 		} else {
 		// if scrolling up and height page < 650px
-			if (scrollTop < 750) {
+			if (scrollTop < 300) {
 				menuSelector.removeClass('nav-wrapper');
 				return
 			}  
