@@ -12,9 +12,6 @@ header,
 section{
 	transition: .3s;
 }
-
-// background image section
-
 header{
 	background-color: #BAB2A8;
 	position: relative;
@@ -365,7 +362,7 @@ section:nth-child(even){
 
 .top-nav__signin{
 	padding: 5px;
-	background-color: red !important;
+	background-color: red;
 }
 .top-nav__signin .active{
 	background-color: rgba(10, 6, 95, 1.0);
