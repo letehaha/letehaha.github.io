@@ -78,6 +78,7 @@ $(function() {
 	$('#burger-top').click(function(e) {
 		bulletsContainer.slideToggle(300);
 		$(this).toggleClass('active');
+		$('.bullets-container').toggleClass('bullets-container--translate');
 		// slideContent.css({transform: 'translateX(-60%)'})
 		// overfloWrapper.addClass('overflow-wrapper--hidden');
 		// mainBurgerMenu.css({width: '60%'});
@@ -145,7 +146,7 @@ $.fn.fixmenu = function() {
 
 		var scrollTop = $(document).scrollTop();
 		// if height page < 350px
-		if (scrollTop < 300) {
+		if (scrollTop < 550) {
 			menuSelector.addClass('nav-wrapper');
 			return
 		}   
