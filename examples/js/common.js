@@ -10,6 +10,17 @@ $(function() {
 
 
 
+// signin open/close
+
+$('#session').click(function(e) {
+	$(this).toggleClass('active');
+	$('.signin-dropdown').toggleClass('is-visible');
+});
+
+//******************
+
+
+
 // showing button Up
 
 	var arrowTop = document.querySelector('#page-scroll-top');
@@ -28,25 +39,7 @@ $(function() {
 
 
 
-// stick menu
-
-	// var topNavigation = document.getElementById('nav-wrapper');
-
-	// function onScroller() {
-	// 	if(window.pageYOffset > 650){
-	// 		setTimeout(function(){topNavigation.classList.add('nav-wrapper--bgc')}, 300);
-	// 	} else{
-	// 		setTimeout(function(){topNavigation.classList.remove('nav-wrapper--bgc')}, 300);
-	// 	}
-	// }
-
-	// document.addEventListener('scroll', onScroller);
-
-	//*************
-	
-
-
-	// button Up
+// button Up
 
 	var bodyScrollArrows = $('html,body');
 
@@ -55,22 +48,22 @@ $(function() {
 		bodyScrollArrows.stop().animate({ scrollTop: $('#header').offset().top }, 500);
 	});
 
-	//****************
+//****************
 
 
 
-	// button Down
+// button Down
 
 	$('#btn-down').click(function(e) {
   	e.preventDefault();
 		bodyScrollArrows.stop().animate({ scrollTop: $('#scrollto-section-1').offset().top }, 400);
 	});
 
-	//****************
+//****************
 
 
 
-	// open burger-menu
+// open burger-menu
 
 	var mainBurgerMenu = $('.main-burger-menu'),
 			bulletsContainer = $('.burger-panel-list');
@@ -79,48 +72,30 @@ $(function() {
 		bulletsContainer.slideToggle(300);
 		$(this).toggleClass('active');
 		$('.bullets-container').toggleClass('bullets-container--translate');
-		// slideContent.css({transform: 'translateX(-60%)'})
-		// overfloWrapper.addClass('overflow-wrapper--hidden');
-		// mainBurgerMenu.css({width: '60%'});
-		// bulletsContainer.css({display: 'none'});
-		// bodyPage.css({'overflow-y': 'hidden'});
-  // 	e.preventDefault();
+  	e.preventDefault();
 	});
 
-	//****************
+//****************
 
 
 
-	// close burger-menu
-
-	// $('#close-btn-nav').click(function(e) {
-	// 	slideContent.css({transform: 'inherit'})
-	// 	overfloWrapper.removeClass('overflow-wrapper--hidden');
-	// 	mainBurgerMenu.css({width: '0'});
-	// 	bulletsContainer.css({display: 'flex'});
-	// 	bodyPage.css({'overflow-y': 'auto'});
- //  	e.preventDefault();
-	// });
-
-	//****************
-
-
-
-	// effect elements list in open-burger menu
+// effect elements list in open-burger menu
 
 	$('.burger-panel__elem').hover(function() {
 		$(this).children('.burger-panel__list').slideToggle();
 	});
 
-	//****************
+//****************
 
 
 
-	//use function fixmenu
+//use function fixmenu
 
 	$(".nav-wrapper").fixmenu();
 
-	//****************
+//****************
+
+// smooth scroll when click on link in menu
 
 	$('a.burger-panel__elem-link').smoothScroll({
 		speed: 700
@@ -129,7 +104,9 @@ $(function() {
 });
 
 $.fn.fixmenu = function() {
-  // fix menu on top where scrolling
+	
+// fix menu on top where scrolling
+
 	var menuSelector = $(this);   
 	menuSelector.wrap("<div class='top-menu-container' style='" + "min-height:" + menuSelector.height() + "px;'></div");
 	sticky();
