@@ -1,7 +1,7 @@
 # letehaha.github.io
 
 ##Atlantida
-layout PSD. No adaptive. View on width 1440px<br>
+layout PSD. No adaptive. View on width 1440px. IE 10+<br>
 
 [letehaha.github.io/Atlantida/](http://letehaha.github.io/Atlantida/)<br>
 [letehaha.github.io/Atlantida/blog/](http://letehaha.github.io/Atlantida/blog/)<br>
