@@ -66,11 +66,16 @@ $('#session').click(function(e) {
 // open burger-menu
 
 	var mainBurgerMenu = $('.main-burger-menu'),
-			bulletsContainer = $('.burger-panel-list');
+			burgerPanelList = $('.burger-panel-list');
 
 	$('#burger-top').click(function(e) {
-		bulletsContainer.slideToggle(300);
 		$(this).toggleClass('active');
+		$('.burger-panel--container').toggleClass('burger-panel--container-active');
+	  if($('.burger-panel--container').hasClass('burger-panel--container-active')){
+	  	$('.burger-panel--container').css({'min-height': '200px'})
+	  } else{
+			$('.burger-panel--container').css({'min-height': '0px'});
+	  }
 		$('.bullets-container').toggleClass('bullets-container--translate');
   	e.preventDefault();
 	});
