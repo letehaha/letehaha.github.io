@@ -72,9 +72,9 @@ $('#session').click(function(e) {
 		$(this).toggleClass('active');
 		$('.burger-panel--container').toggleClass('burger-panel--container-active');
 	  if($('.burger-panel--container').hasClass('burger-panel--container-active')){
-	  	$('.burger-panel--container').css({'min-height': '200px'})
+	  	$('.burger-panel--container').css({'height': '200px'})
 	  } else{
-			$('.burger-panel--container').css({'min-height': '0px'});
+			$('.burger-panel--container').css({'height': '0px'});
 	  }
 		$('.bullets-container').toggleClass('bullets-container--translate');
   	e.preventDefault();
