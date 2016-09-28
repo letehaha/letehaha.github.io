@@ -13,7 +13,7 @@ section{
 	transition: .3s;
 }
 header{
-	background-color: #BAB2A8;
+	background-color: #fff;
 	position: relative;
 	background: url('../img/SKtoTXfMmxw.jpg') no-repeat;
 	background-size: cover;
@@ -37,6 +37,7 @@ section:nth-child(even){
 	position: fixed;
 	width: 100%;
 	opacity: 1;
+	z-index: 1000;
 	background-color: rgba(240, 240, 240, .8);
 }
 
@@ -66,6 +67,9 @@ section:nth-child(even){
 	margin-left: auto;
 	list-style-type: none;
 }
+.top-nav__elem--lang span:hover a{
+	border-bottom: 1px solid #fff;
+}
 .top-nav__elem--lang span a{
 	text-transform: uppercase;
 	cursor: pointer;
@@ -83,10 +87,13 @@ section:nth-child(even){
 .top-nav__signin .active{
 	background-color: rgba(10, 6, 95, 1.0);
 }
-.top-nav__signin:hover{
-	background-color: rgba(10, 6, 95, 1.0);
+.top-nav__signin:hover .top-nav__signin-link{
+	border-bottom: 1px solid #fff;
 }
-.top-nav__signin-link{color: #fff;}
+.top-nav__signin-link{
+	color: #fff;
+	font-size: 14px;
+}
 .signin-dropdown{
 	display: none;
 	position: absolute;
@@ -253,7 +260,7 @@ section:nth-child(even){
 	width: 190px;
 	right: 0;
 }
-.burger-panel--container-active{max-height: 200px;}
+.burger-panel--container-active{height: 200px;}
 .burger-panel-list{
 	position: absolute;
 	z-index: 1000;
@@ -452,3 +459,129 @@ section:nth-child(even){
 }
 
 /* radio button navigation ***END*** */
+
+/* header slider */
+
+.header-slider{
+	height: 400px;
+	width: 100%;
+	position: relative;
+}
+.header-slide__img img{
+	display: block;
+	width: 100%;
+	height: 400px;
+}
+.header-slide__intro{
+	position: absolute;
+	top: 20px;
+	margin-left: 200px;
+}
+.first-intro,
+.second-intro{
+	padding: 10px;
+	font-size: 24px;
+}
+.first-intro{
+	background-color: #fff;
+	color: #333;
+	margin-right: 100px
+}
+.second-intro{
+	background-color: rgba(205,0,0,1);
+	color: #fff;
+	margin-left: 100px
+}
+.header-slider:hover .slick-next,
+.header-slider:hover .slick-prev{
+	opacity: 1;
+}
+.slick-next,
+.slick-prev{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: calc(50% - 60px);
+	color: #fff;
+	font-size: 25px;
+	z-index: 5;
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	z-index: 999;
+	opacity: 0;
+	background-color: rgba(0,0,0,.3);
+	transition: .3s;
+	border-radius: 5px;
+}
+.slick-next:hover,
+.slick-prev:hover{
+	background-color: rgba(0,0,0,.5);
+}
+.slick-prev{
+	left: 0;
+	margin-left: 75px;
+}
+.slick-next{
+	margin-right: 75px;
+	right: 0;
+}
+
+.slick-dots{
+	position: absolute;
+	bottom: 50px;
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	left: 48%;
+}
+.slick-dots li{
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+	padding: 0;
+	cursor: pointer;
+}
+.slick-dots li button{
+	font-size: 0;
+	line-height: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	padding: 5px;
+	cursor: pointer;
+	outline: none;
+	opacity: .5;
+	background-color: rgba(0,0,0,.6);
+	border: 2px solid #fff;
+	border-radius: 50%;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before{
+	opacity: 1;
+}
+.slick-dots li button:before{
+	font-family: 'slick';
+	font-size: 6px;
+	line-height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	content: '';
+	text-align: center;
+	opacity: .25;
+	color: black;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button{
+	opacity: 1;
+}

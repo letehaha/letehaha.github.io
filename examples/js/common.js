@@ -66,16 +66,12 @@ $('#session').click(function(e) {
 // open burger-menu
 
 	var mainBurgerMenu = $('.main-burger-menu'),
-			burgerPanelList = $('.burger-panel-list');
+			burgerPanelList = $('.burger-panel-list'),
+			burgerPanelContainer = $('.burger-panel--container');
 
 	$('#burger-top').click(function(e) {
 		$(this).toggleClass('active');
-		$('.burger-panel--container').toggleClass('burger-panel--container-active');
-	  if($('.burger-panel--container').hasClass('burger-panel--container-active')){
-	  	$('.burger-panel--container').css({'height': '200px'})
-	  } else{
-			$('.burger-panel--container').css({'height': '0px'});
-	  }
+		burgerPanelContainer.toggleClass('burger-panel--container-active');
 		$('.bullets-container').toggleClass('bullets-container--translate');
   	e.preventDefault();
 	});
@@ -145,4 +141,16 @@ $.fn.fixmenu = function() {
 		}
 	scrollPos = st;
 	}
+
+	//header slider 
+
+	$('.header-slider').slick({
+		nextArrow: '<div class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
+		prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		draggable: false,
+		speed: 1000
+	});
 }
