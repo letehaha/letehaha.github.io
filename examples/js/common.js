@@ -149,7 +149,7 @@ $.fn.fixmenu = function() {
 		prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
 		dots: true,
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 5000,
 		draggable: false,
 		speed: 1000
 	});
