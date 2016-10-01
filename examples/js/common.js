@@ -45,7 +45,13 @@ $('#session').click(function(e) {
 
 //*************
 
-
+	$('body .bullets-container').scroll(function() {
+		if($('body .bullets-container').offset().top > 600) {
+			$('body .bullets-container').css({'dislay':'flex'})
+		} else{
+			$('body .bullets-container').css({'dislay':'none'})
+		}
+	});
 
 // button Up
 
