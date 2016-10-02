@@ -9,7 +9,6 @@ $(function() {
 //******************
 
 
-
 // signin open/close
 
 $('#session').click(function(e) {
@@ -44,12 +43,14 @@ $('#session').click(function(e) {
 	document.addEventListener('scroll', btnScrollTop);
 
 //*************
+	
+	var bulletsContainer = $('.bullets-container');
 
-	$('body .bullets-container').scroll(function() {
-		if($('body .bullets-container').offset().top > 600) {
-			$('body .bullets-container').css({'dislay':'flex'})
+	$(window).scroll(function() {
+		if(bulletsContainer.offset().top > 500) {
+			bulletsContainer.css({'display':'flex'})
 		} else{
-			$('body .bullets-container').css({'dislay':'none'})
+			bulletsContainer.css({'display':'none'})
 		}
 	});
 
