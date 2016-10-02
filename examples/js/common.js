@@ -167,7 +167,7 @@ $.fn.fixmenu = function() {
 		nextArrow: '<div class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
 		prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
 		dots: true,
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 5000,
 		draggable: false,
 		speed: 1000,
