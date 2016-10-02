@@ -164,9 +164,12 @@ $.fn.fixmenu = function() {
 		prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
 		dots: true,
 		autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 4000,
 		draggable: false,
-		speed: 1500,
-		swipe: false
+		speed: 2500,
+		swipe: false,
+		pauseOnFocus: false,
+		pauseOnHover: false
 	});
+
 }
