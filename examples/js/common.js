@@ -123,7 +123,7 @@ $('#session').click(function(e) {
 		nextArrow: '<div class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
 		prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
 		dots: true,
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 3000, 	// speed from the previous to the next slide
 		draggable: false,
 		speed: 1000, 					// speed transition
