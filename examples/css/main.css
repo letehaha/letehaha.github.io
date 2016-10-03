@@ -492,8 +492,8 @@ section:nth-child(even){
 	animation-fill-mode: both;
 	-webkit-animation-name: fadeInRight;
 	animation-name: fadeInRight;
-	-webkit-animation-delay: 2s;
-	animation-delay: 2s;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
 }
 .header-slide .header-slide__intro h2{
 	-webkit-animation-duration: .6s;
@@ -509,8 +509,8 @@ section:nth-child(even){
   }
   50%{
   	opacity: .8;
-  	-webkit-transform: translate3d(10%, 0, 0);
-    transform: translate3d(10%, 0, 0);
+  	-webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0);
   }
   100%{
     opacity: 0;
@@ -525,8 +525,8 @@ section:nth-child(even){
   }
   50%{
   	opacity: .8;
-  	-webkit-transform: translate3d(10%, 0, 0);
-    transform: translate3d(10%, 0, 0);
+  	-webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0);
   }
   100%{
     opacity: 0;

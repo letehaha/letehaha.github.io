@@ -113,6 +113,27 @@ $('#session').click(function(e) {
 		speed: 700
 	});
 
+//****************
+
+
+
+//header slider 
+
+	$('.header-slider').slick({
+		nextArrow: '<div class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
+		prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
+		dots: true,
+		// autoplay: true,
+		autoplaySpeed: 3000, 	// speed from the previous to the next slide
+		draggable: false,
+		speed: 1000, 					// speed transition
+		swipe: false,
+		pauseOnFocus: false,
+		pauseOnHover: false
+	});
+
+//****************
+
 });
 
 $.fn.fixmenu = function() {
@@ -152,24 +173,5 @@ $.fn.fixmenu = function() {
 		}
 	scrollPos = st;
 	}
-
-	//header slider 
-
-	$('.header-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	  console.log(nextSlide);
-	});
-
-	$('.header-slider').slick({
-		nextArrow: '<div class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
-		prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
-		dots: true,
-		autoplay: true,
-		autoplaySpeed: 4000,
-		draggable: false,
-		speed: 2500,
-		swipe: false,
-		pauseOnFocus: false,
-		pauseOnHover: false
-	});
 
 }
