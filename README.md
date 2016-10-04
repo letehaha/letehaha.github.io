@@ -13,12 +13,12 @@ PSD layout. Adaptive. View on width 1200px (http://goo.gl/jFVBty)
 [letehaha.github.io/MoGo/](http://letehaha.github.io/MoGo/)
 
 ##brandly
-PSD layout. Adaptive. View on width 1270px
+PSD layout. View on width 1270px
 
 [letehaha.github.io/brandly/](http://letehaha.github.io/brandly/)
 
 ##inktattoo
-PSD layout. Adaptive. View on width 1270px
+PSD layout. View on width 1270px
 
 [letehaha.github.io/inktattoo/](http://letehaha.github.io/inktattoo/)
 
