@@ -1,0 +1,271 @@
+/* top nav (LinkedIn/Twitter, language, Sign In) */
+
+/* LinkedIn/Twitter */
+.top-nav__soc-item{
+	padding: 5px 10px 5px 5px;
+	display: inline-block;
+}
+.top-nav__soc-item:not(:last-child){
+	border-right: 1px solid #fff;
+}
+.top-nav__soc-item a{
+	color: #fff;
+}
+/* LinkedIn/Twitter ***END*** */
+/* language */
+.top-nav__elem--lang{
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 11px;
+	padding: 0 10px;
+	margin-right: 10px;
+	border-right: 1px solid #fff;
+	margin-left: auto;
+	list-style-type: none;
+}
+.top-nav__elem--lang span:hover a{
+	border-bottom: 1px solid #fff;
+}
+.top-nav__elem--lang span a{
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #fff;
+}
+.top-nav__elem--lang span.active a{
+	color: $main-color-red;
+}
+/* language ***END*** */
+/* SignIn form */
+.top-nav__signin{
+	padding: 5px;
+	cursor: pointer;
+}
+.top-nav__signin .active{
+	background-color: rgba(10, 6, 95, 1.0);
+}
+.top-nav__signin:hover .top-nav__signin-link{
+	border-bottom: 1px solid #fff;
+}
+.top-nav__signin-link{
+	color: #fff;
+	font-size: 14px;
+}
+.signin-dropdown{
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 28px;
+	z-index: 2;
+}
+.form-signin{
+	display: flex;
+	flex-direction: column;
+	background-color: $main-color-blue;
+	padding: 15px;
+}
+.form-signin__label,
+.form-signin__label-checkbox{
+	font-size: 11px;
+	color: #fff;
+	line-height: 2;
+}
+.form-signin__input{
+	margin-bottom: 10px;
+	padding: 5px;
+	background-color: rgba(230,230,230,1);
+	border: none;
+	border-radius: 5px;
+	font-size: 14px;
+}
+.form-signin-user,
+.form-signin-pass{
+	display: flex;
+	flex-direction: column;
+}
+.is-visible{
+	display: block;
+}
+.form-signin-group{
+	display: flex;
+	justify-content: space-between;
+}
+.form-signin-button{
+	font-size: 14px;
+	padding: 4px 7px;
+	color: #333;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	transition: $transition-m;
+}
+.form-signin-button:hover{
+	background-color: #BCBCBC;
+}
+.form-signin-links{
+	margin-top: 15px;
+}
+.form-signin-link{
+	font-size: 11px;
+	color: rgba(240,240,240,.6);
+	transition: $transition-m;
+}
+.form-signin-link:hover{
+	color: #fff;
+}
+/* SignIn form ***END*** */
+
+/* top nav (LinkedIn/Twitter, language, Sign In) */
+/* *****************END**************** */
+
+
+/* top nav (logo, menu, burger) */
+/* logo */
+.top-nav__container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 25px;
+}
+.top-nav__logo{
+	max-width: 220px;
+}
+.top-nav__logo a img{
+	display: block;
+	width: 100%;
+}
+/* logo ***END*** */
+/* Menu */
+.top-nav__list{
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+.top-nav__elem--text{
+	padding: 30px 0;
+	transition: $transition-m;
+	border-bottom: 5px solid rgba(0,0,0,0);
+}
+.top-nav__elem--text a{
+	text-transform: uppercase;
+	color: rgba(150,150,150,1);
+	padding: 0 10px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	line-height: 1;
+	border-right: 1px solid #fff;
+}
+.top-nav__elem-text--active{
+	border-bottom: 5px solid $main-color-red;
+}
+.top-nav__elem--text:hover{
+	border-bottom: 5px solid $main-color-red;
+}
+.top-nav__soc{
+	display: block;
+	background-color: rgba(17, 11, 115, 1);
+	padding: 0 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/* Burger */
+.top-nav__elem--burger{margin-left: 10px; position: relative;}
+.burger-top{
+	width: 40px;
+	height: 40px;
+	display: block;
+	position: relative;
+	cursor: pointer;
+	border: 2px solid rgba(0,0,0,0);
+  border-radius: 50%;
+  transition: $transition-m;
+}
+.burger-top--active{
+	background-color: $main-color-red;
+}
+.burger-top:hover{
+	border-color: $main-color-red;
+}
+.burger-top .bar{
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 2px;
+	background-color: rgba(150,150,150,1);
+	top: 18px;
+	left: 8px;
+	transition: $transition-m;
+}
+.burger-top:hover .bar{
+	background-color: $main-color-red;
+}
+.burger-top .bar--top{
+	margin-top: -6px;
+}
+.burger-top .bar--bot{
+	margin-top: 6px;
+}
+.burger-panel--container{
+	position: absolute;
+	transition: all $transition-s;
+	overflow: hidden;
+	height: 0;
+	width: 190px;
+	right: 0;
+}
+.burger-panel--container-active{height: 200px;}
+.burger-panel-list{
+	position: absolute;
+	z-index: 1000;
+	width: 190px;
+	top: 40px;
+	right: 0px;
+	background-color: rgba(240, 240, 240, .8);
+	border-radius: 10px;
+}
+.burger-panel-list:after{
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: -16px;
+	right: 10px;
+	border-style: solid;
+	border-width: 0 11px 16px 11px;
+	border-color: transparent transparent rgba(240, 240, 240, .8) transparent;
+}
+.burger-panel__elem{
+	padding: 5px 10px;
+}
+.burger-panel__elem-link{
+	text-align: center;
+	display: block;
+	width: 100%;
+	color: #333;
+	transition: $transition-s;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 700;
+}
+.burger-panel__elem-link:hover{
+	color: $main-color-red;
+	letter-spacing: 3px;
+}
+.burger-top.active .bar--top,
+.burger-top.active .bar--bot{
+	margin-top: 0;
+}
+.burger-top.active .bar--mid{
+	opacity: 0;
+}
+.burger-top.active .bar--top{
+	transform: rotate(-315deg);
+}
+.burger-top.active .bar--bot{
+	transform: rotate(315deg);
+}
+/* Burger ***END*** */
+/* Menu ***END*** */
+
+/* top nav (logo, menu, burger) ***END*** */

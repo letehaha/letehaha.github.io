@@ -1,0 +1,64 @@
+@import 'includes/vars.scss';
+@import 'includes/animations.scss';
+@import 'includes/reset.scss';
+
+body{
+	font-family: 'Arial', sans-serif;
+	width: 100%;
+}
+header,
+section{
+	height: 100vh;
+}
+.slide-content,
+header,
+section{
+	transition: .3s;
+}
+header{
+	background-color: #fff;
+	position: relative;
+}
+section:nth-child(odd){
+	background: url('../img/axCm7vwOU3E.jpg') no-repeat;
+	background-size: cover;
+}
+section:nth-child(even){
+	background: url('../img/joKAlnYSzqk.jpg') no-repeat;
+	background-size: cover;
+}
+
+.pos-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-wrapper{
+	position: fixed;
+	width: 100%;
+	opacity: 1;
+	z-index: 1000;
+	background-color: #fff;
+}
+
+.section-demo{
+	color: #fff;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content:"";
+	display:table;
+}
+.clearfix:after {
+	clear:both;
+}
+
+@import 'includes/header.scss';
+
+@import 'includes/slider.scss';
+
+@import 'includes/arrow-scroll-top.scss';
+@import 'includes/arrow-scroll-down.scss';
+@import 'includes/radio-buttons-nav.scss';
