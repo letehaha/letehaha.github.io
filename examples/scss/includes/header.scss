@@ -179,7 +179,7 @@
 	cursor: pointer;
 	border: 2px solid rgba(0,0,0,0);
   border-radius: 50%;
-  transition: $transition-m;
+  transition: $transition-l;
 }
 .burger-top--active{
 	background-color: $main-color-red;
@@ -195,7 +195,7 @@
 	background-color: rgba(150,150,150,1);
 	top: 18px;
 	left: 8px;
-	transition: $transition-m;
+	transition: $transition-l;
 }
 .burger-top:hover .bar{
 	background-color: $main-color-red;
@@ -208,7 +208,7 @@
 }
 .burger-panel--container{
 	position: absolute;
-	transition: all $transition-s;
+	transition: all $transition-l;
 	overflow: hidden;
 	height: 0;
 	width: 190px;
