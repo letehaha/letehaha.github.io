@@ -9,6 +9,12 @@ $(function() {
 //******************
 
 
+$('.btn-switch').click(function(e) {
+	$('.form-box').toggleClass('form-box_is-close');
+	e.preventDefault();
+});
+
+
 // signin open/close
 
 $('#session').click(function(e) {
