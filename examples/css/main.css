@@ -25,8 +25,8 @@
             transform: translate3d(100%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: none;
-            transform: none; } }
+    -webkit-transform: inherit;
+            transform: inherit; } }
 
 @keyframes fadeInRight {
   from {
@@ -35,8 +35,8 @@
             transform: translate3d(100%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: none;
-            transform: none; } }
+    -webkit-transform: inherit;
+            transform: inherit; } }
 
 @-webkit-keyframes fadeInRight2x {
   from {
@@ -45,8 +45,8 @@
             transform: translate3d(200%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: none;
-            transform: none; } }
+    -webkit-transform: inherit;
+            transform: inherit; } }
 
 @keyframes fadeInRight2x {
   from {
@@ -55,8 +55,38 @@
             transform: translate3d(200%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: none;
-            transform: none; } }
+    -webkit-transform: inherit;
+            transform: inherit; } }
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: inherit;
+            transform: inherit; } }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: inherit;
+            transform: inherit; } }
+
+.fadeInUp {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s; }
 
 body {
   font-family: 'Arial', sans-serif;
@@ -75,14 +105,6 @@ section {
 header {
   background-color: #fff;
   position: relative; }
-
-section:nth-child(odd) {
-  background: url("../img/axCm7vwOU3E.jpg") no-repeat;
-  background-size: cover; }
-
-section:nth-child(even) {
-  background: url("../img/joKAlnYSzqk.jpg") no-repeat;
-  background-size: cover; }
 
 .pos-center {
   display: -webkit-box;
@@ -112,6 +134,10 @@ section:nth-child(even) {
 
 .clearfix:after {
   clear: both; }
+
+.container {
+  max-width: 1280px;
+  margin: auto; }
 
 /* top nav (LinkedIn/Twitter, language, Sign In) */
 /* LinkedIn/Twitter */
@@ -373,7 +399,7 @@ section:nth-child(even) {
   width: 190px;
   top: 40px;
   right: 0px;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: rgba(240, 240, 240, 0.9);
   border-radius: 10px; }
 
 .burger-panel-list:after {
@@ -462,7 +488,7 @@ section:nth-child(even) {
 
 .header-slide.slick-active .header-slide__intro h2 {
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-name: fadeInRight;
@@ -472,7 +498,7 @@ section:nth-child(even) {
 
 .header-slide.slick-active .header-slide__intro2x h2 {
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-name: fadeInRight2x;
@@ -682,7 +708,6 @@ section:nth-child(even) {
 .slick-slide {
   display: none;
   float: left;
-  height: 100%;
   min-height: 1px; }
 
 [dir='rtl'] .slick-slide {
@@ -711,11 +736,88 @@ section:nth-child(even) {
 .slick-arrow.slick-hidden {
   display: none; }
 
+.about-descr h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #333; }
+
+.about-elements {
+  margin: 100px; }
+
+.about-element {
+  width: 40%;
+  padding: 50px;
+  border: 1px solid red;
+  border-radius: 50%; }
+  .about-element:nth-child(1) {
+    position: relative; }
+    .about-element:nth-child(1):after {
+      position: absolute;
+      content: '';
+      width: 141px;
+      height: 124px;
+      background: url("../img/arrow.png") no-repeat;
+      background-size: cover;
+      right: -145px;
+      top: 45px;
+      -webkit-transform: rotate(75deg);
+              transform: rotate(75deg); }
+  .about-element:nth-child(2) {
+    margin: -20px 0 -20px 33%;
+    position: relative; }
+    .about-element:nth-child(2):after {
+      position: absolute;
+      content: '';
+      width: 141px;
+      height: 124px;
+      background: url("../img/arrow.png") no-repeat;
+      background-size: cover;
+      right: -145px;
+      top: 45px;
+      -webkit-transform: rotate(75deg);
+              transform: rotate(75deg); }
+    .about-element:nth-child(2):before {
+      position: absolute;
+      content: '';
+      width: 141px;
+      height: 124px;
+      background: url("../img/arrow.png") no-repeat;
+      background-size: cover;
+      left: -155px;
+      top: 30px;
+      -webkit-transform: rotate(255deg);
+              transform: rotate(255deg); }
+  .about-element:nth-child(3) {
+    margin-left: 65%;
+    position: relative; }
+    .about-element:nth-child(3):before {
+      position: absolute;
+      content: '';
+      width: 141px;
+      height: 124px;
+      background: url("../img/arrow.png") no-repeat;
+      background-size: cover;
+      left: -155px;
+      top: 30px;
+      -webkit-transform: rotate(255deg);
+              transform: rotate(255deg); }
+
+.about-element-descr h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px; }
+
+.about-element-intro {
+  text-align: center; }
+  .about-element-intro p {
+    line-height: 1.5;
+    color: #333; }
+
 /* Arrow scroll top */
 .page-scroll-top {
   position: fixed;
   opacity: 0;
-  bottom: 30px;
+  bottom: 80px;
   right: 30px;
   width: 30px;
   height: 30px;
@@ -859,27 +961,37 @@ section:nth-child(even) {
 
 /* radio button navigation ***END*** */
 .form-box_is-close {
-  -webkit-transform: translateY(94%);
-          transform: translateY(94%); }
+  -webkit-transform: translateY(95%);
+          transform: translateY(95%); }
 
 .form-box {
   position: fixed;
-  right: 15px;
+  right: 20px;
   bottom: 15px;
   z-index: 1000;
-  width: 350px;
+  width: 400px;
   border-radius: 5px;
   -webkit-transition: .3s;
   transition: .3s; }
+  .form-box .form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .form-box .form-name,
+  .form-box .form-sname {
+    width: 45%; }
   .form-box .form-popup {
-    background-color: rgba(240, 240, 240, 0.8);
+    background-color: rgba(240, 240, 240, 0.9);
     padding: 10px;
     border-radius: 5px 0px 5px 5px; }
   .form-box .btn-switch {
     width: 50px;
     height: 40px;
     margin-left: auto;
-    background: rgba(240, 240, 240, 0.8);
+    background: rgba(240, 240, 240, 0.9);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -907,37 +1019,26 @@ section:nth-child(even) {
           -ms-flex-pack: center;
               justify-content: center;
       cursor: pointer; }
-  .form-box .form-input {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 20px; }
   .form-box input[type="text"],
   .form-box input[type="email"] {
-    width: 220px;
     padding: 5px;
     border-radius: 5px;
-    border: 2px solid #cd0000; }
-  .form-box label {
-    width: 70px;
+    border: 1px solid #cd0000;
+    display: block;
+    width: 100%; }
+  .form-box .input-label {
     margin-left: 10px;
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
-    font-weight: 700; }
+    color: #333; }
   .form-box textarea {
     width: 100%;
     border-radius: 5px;
-    border: 2px solid #cd0000;
+    border: 1px solid #cd0000;
     resize: none;
     padding: 10px; }
   .form-box .form-submit {
+    margin-top: 15px;
     padding: 5px 15px;
     background-color: #110b73;
     color: #fff;
@@ -947,3 +1048,20 @@ section:nth-child(even) {
     cursor: pointer;
     margin-left: auto;
     display: block; }
+  .form-box .form-email {
+    margin: 15px 0; }
+  .form-box .form-descr {
+    margin-bottom: 25px;
+    text-align: center; }
+    .form-box .form-descr label {
+      font-size: 22px;
+      font-weight: 700;
+      position: relative; }
+      .form-box .form-descr label:after {
+        position: absolute;
+        content: '';
+        width: 120%;
+        height: 2px;
+        background-color: #333;
+        bottom: -5px;
+        left: -10%; }

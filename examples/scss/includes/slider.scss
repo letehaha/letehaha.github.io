@@ -20,14 +20,12 @@
 	width: 600px;
 }
 .header-slide.slick-active .header-slide__intro h2{
-	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
 	animation-fill-mode: both;
 	animation-name: fadeInRight;
 	animation-delay: 1s;
 }
 .header-slide.slick-active .header-slide__intro2x h2{
-	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
 	animation-fill-mode: both;
 	animation-name: fadeInRight2x;

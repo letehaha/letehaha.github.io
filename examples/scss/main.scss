@@ -19,14 +19,6 @@ header{
 	background-color: #fff;
 	position: relative;
 }
-section:nth-child(odd){
-	background: url('../img/axCm7vwOU3E.jpg') no-repeat;
-	background-size: cover;
-}
-section:nth-child(even){
-	background: url('../img/joKAlnYSzqk.jpg') no-repeat;
-	background-size: cover;
-}
 
 .pos-center{
 	display: flex;
@@ -55,9 +47,16 @@ section:nth-child(even){
 	clear:both;
 }
 
+.container{
+	max-width: 1280px;
+	margin: auto;
+}
+
 @import 'includes/header.scss';
 
 @import 'includes/slider.scss';
+
+@import 'includes/about.scss';
 
 @import 'includes/arrow-scroll-top.scss';
 @import 'includes/arrow-scroll-down.scss';

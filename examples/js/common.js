@@ -8,11 +8,17 @@ $(function() {
 
 //******************
 
+new WOW().init();
+
+// form open/close
 
 $('.btn-switch').click(function(e) {
 	$('.form-box').toggleClass('form-box_is-close');
+	$('.form-popup').toggleClass('btn-switch_is-close');
 	e.preventDefault();
 });
+
+//******************
 
 
 // signin open/close
@@ -24,11 +30,6 @@ $('#session').click(function(e) {
 
 //******************
 
- function animateSlide(e){
- 	
- };
-
- animateSlide();
 
 // showing button Up
 
@@ -136,6 +137,32 @@ $('#session').click(function(e) {
 		swipe: false,
 		pauseOnFocus: false,
 		pauseOnHover: false
+	});
+
+//****************
+
+// form
+
+	$("#form-popup").submit(function() {
+
+		if (true){
+			post_data = {
+				'user_name': $('input[name=form-name]').val(),
+				'user_sname': $('input[name=form-sname]').val(),
+				'phone_email': $('input[name=form-email]').val(),
+				'msg': $('textarea[name=form-area]').val()
+			};
+
+
+			$.post('../mail.php', post_data, function(response) {
+				if (response.type == 'error') {
+					console.log(0);
+				} else {
+					console.log(1);
+				}
+			}, 'json');
+		}
+		
 	});
 
 //****************
