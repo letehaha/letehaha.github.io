@@ -283,6 +283,7 @@
 	<div class="form-box form-box_is-close">
 		<div class="btn-switch btn-switch_is-close">
 			<span class="btn-switch-minus">+</span>
+			<i class="fa fa-envelope" aria-hidden="true"></i>
 		</div>
 		<form id="form-popup" method="POST" class="form-popup" action="mail.php">
 			<div class="form-descr">
@@ -291,20 +292,20 @@
 			<div class="form-container">
 				<div class="form-input form-name">
 					<label class="input-label" for="form-name">First Name</label>
-					<input type="text" id="form-name" required name="form-name">
+					<input type="text" id="form-name" class="validate[required,minSize[3]]" required name="form-name">
 				</div>
 				<div class="form-input form-sname">
 					<label class="input-label" for="form-sname">Last Name</label>
-					<input type="text" id="form-sname" required name="form-sname">
+					<input type="text" id="form-sname" class="validate[required,minSize[3]]" required name="form-sname">
 				</div>
 			</div>
 			<div class="form-input form-email">
 				<label class="input-label" for="form-email">eMail</label>
-				<input type="email" id="form-email" name="form-email">
+				<input type="email" class="validate[required, custom[email]]" id="form-email" name="form-email">
 			</div>
 			<div class="form-area">
 				<label class="input-label" for="form-area">Your message:</label>
-				<textarea name="form-area" required id="form-area" cols="30" rows="5"></textarea>
+				<textarea name="form-area" class="validate[required,minSize[10]]" required id="form-area" cols="30" rows="5"></textarea>
 			</div>
 			<div class="form-btn">
 				<button id="form-btn" class="form-submit" type="submit">Send</button>
@@ -319,6 +320,8 @@
 	<script src="js/jquerySmoothScroll.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="libs/wow/wow.min.js"></script>
+	<script src="libs/validate/jquery.validationEngine-en.js"></script>
+	<script src='libs/validate/jquery.validationEngine.js'></script>
 	<script src="js/common.js"></script>
 
 </body>

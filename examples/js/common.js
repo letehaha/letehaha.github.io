@@ -10,12 +10,56 @@ $(function() {
 
 new WOW().init();
 
+
+	$("#form-popup").validationEngine('attach',{
+		promptPosition : "bottomLeft", maxErrorsPerField : 1,
+		showArrow : false, 'custom_error_messages':{
+			'#form-name' : {
+				'required' : {
+					'message' : "* This field is required"
+				},
+				'minSize' : {
+					'message' : "* Little lenght. Need more"
+				}
+			},
+			'#form-sname' : {
+				'minSize' : {
+					'message' : "* Little lenght. Need more"
+				}
+			},
+			'#form-email' : {
+				'required' : {
+					'message' : "* This field is required"
+				},
+				'custom[email]' : {
+					'message' : "* Error."
+				}
+			},
+			'#form-area' : {
+				'required' : {
+					'message' : "* This field is required"
+				},
+				'minSize' : {
+					'message' : "* Need more words"
+				}
+			}
+		}
+	});
+
 // form open/close
 
 $('.btn-switch').click(function(e) {
 
-	var text = $('.btn-switch-minus').text();
-	$('.btn-switch-minus').text(text == '+' ? '_' : '+');
+	var firstSpan = $('.btn-switch span');
+	var secondSpan = $('.btn-switch i');
+
+	if(firstSpan.is(':visible')){
+		firstSpan.hide();
+		secondSpan.show();
+	} else{
+		firstSpan.show();
+		secondSpan.hide();
+	}
 
 	$('.form-box').toggleClass('form-box_is-close');
 	$('.form-popup').toggleClass('btn-switch_is-close');
