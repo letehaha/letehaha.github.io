@@ -13,6 +13,10 @@ new WOW().init();
 // form open/close
 
 $('.btn-switch').click(function(e) {
+
+	var text = $('.btn-switch-minus').text();
+	$('.btn-switch-minus').text(text == '+' ? '_' : '+');
+
 	$('.form-box').toggleClass('form-box_is-close');
 	$('.form-popup').toggleClass('btn-switch_is-close');
 	e.preventDefault();
