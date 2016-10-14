@@ -1,0 +1,109 @@
+.form-box_is-close{
+	transform: translateY(95%);
+}
+// .form-box_center{
+// 	right: calc(50% - 200px);
+// 	bottom: 70%;
+// }
+.form-box{
+	position: fixed;
+	right: 20px;
+	bottom: 15px;
+	z-index: 1002;
+	width: 400px;
+	border-radius: 5px;
+	transition: .7s; // need for js submitFormAnimations()
+	.form-container{
+		display: flex;
+		justify-content: space-between;
+	}
+	.form-name,
+	.form-sname{
+		width: 45%;
+	}
+	.form-popup{
+		background-color: $light-white-transparent;
+		padding: 10px;
+		border-radius: 5px 0px 5px 5px;
+	}
+	.btn-switch{
+		width: 50px;
+		height: 40px;
+		margin-left: auto;
+		background: $light-white-transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 5px 5px 0px 0px;
+		color: #333;
+		font-size: 1.3em;
+		cursor: pointer;
+		.btn-switch-minus{
+			height: 25px;
+			width: 25px;
+			padding: 3px;
+			border-radius: 5px;
+			background-color: $main-color-blue;
+			color: #fff;
+			display: none;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+		}
+	}
+	input[type="text"],
+	input[type="email"]{
+		padding: 5px;
+		border-radius: 5px;
+		border: 1px solid $main-color-red;
+		display: block;
+		width: 100%;
+	}
+	.input-label{
+		margin-left: 10px;
+		font-size: 16px;
+		line-height: 1.5;
+		color: #333;
+		// font-weight: 700;
+	}
+	textarea{
+		width: 100%;
+		border-radius: 5px;
+		border: 1px solid $main-color-red;
+		resize: none;
+		padding: 5px;
+	}
+	.form-submit{
+		margin-top: 15px;
+		padding: 5px 15px;
+		background-color: $main-color-blue;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		font-size: 20px;
+		cursor: pointer;
+		margin-left: auto;
+		display: block;
+	}
+	.form-email{
+		margin: 15px 0;
+	}
+	.form-descr{
+		margin-bottom: 25px;
+		text-align: center;
+		label{
+			font-size: 22px;
+			font-weight: 700;
+			position: relative;
+			&:after{
+				position: absolute;
+				content: '';
+				width: 120%;
+				height: 2px;
+				background-color: #333;
+				bottom: -5px;
+				left: -10%;
+			}
+		}
+	}
+}

@@ -1,0 +1,118 @@
+.popup-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	// background-color: rgba(255,255,255,.5);
+	z-index: 1001;
+	left: calc(50% - 225px);
+	top: calc(50% - 125px);
+}
+.envelope{
+	transition: 3s;
+}
+.popup-thanks{
+	z-index: 1002;
+	width: 500px;
+	height: 250px;
+	background-color: $popup-thanks;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	box-shadow: 0px 0px 0px 0px #fff;
+	transform: translateY(-600px);
+	transition: .5s;
+	h1{
+		color: #fff;
+		font-size: 32px;
+		font-weight: 300;
+		font-family: 'Open Sans', sans-serif;
+	}
+	h2{
+		margin-bottom: 20px;
+		color: #fff;
+		font-size: 26px;
+		font-weight: 300;
+		font-family: 'Open Sans', sans-serif;
+	}
+}
+
+
+.envelope__bottom{
+	margin-top: 200px;
+	width:450px;
+	height:250px;
+	backface-visibility: hidden;
+	transition: .3s; // need for js submitFormAnimations()
+}
+.envelope__bottom--back{
+  position:absolute;
+  z-index:999;
+  background:transparent;
+}
+
+.envelope__bottom--front{
+	position:absolute;
+	transform: rotateY(180deg);
+}
+
+.top,
+.bottom,
+.right,
+.left{
+	display: none;
+}
+
+.top{
+  position:absolute;
+  top:0px;
+  left:-1px;
+  width:0;
+  height:0;
+  border-top:180px solid #333;
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  transform:rotatex(180deg);
+  transition: all 1s 1.5s;
+  transform-style: preserve-3d;
+  transform-origin: 100% 0%;
+  z-index:-1;
+}
+
+.right{
+  position:absolute;
+  top:0px;
+  right:0px;
+  width:0;
+  height:0;
+  border-top:125px solid transparent;
+  border-right: 226px solid red;
+  border-bottom: 125px solid transparent;
+  z-index:3;
+}
+
+.bottom{
+  position:absolute;
+  top:125px;
+  left:-1px;
+  width:0;
+  height:0;
+  border-bottom:125px solid green;
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  z-index:3;
+  overflow: hidden;
+}
+
+.left{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:0;
+  height:0;
+  border-top:125px solid transparent;
+  border-left: 226px solid #111;
+  border-bottom: 125px solid transparent;
+  z-index:3;
+}

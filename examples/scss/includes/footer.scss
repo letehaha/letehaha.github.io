@@ -1,0 +1,15 @@
+.footer-wrapper{
+	background-color: #111;
+	padding: 90px 0;
+	text-align: center;
+	color: #AAA;
+	.ft-list-elem{
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+	a{
+		color: #AAA;
+		font-size: 32px;
+		margin: 0 15px;
+	}
+}

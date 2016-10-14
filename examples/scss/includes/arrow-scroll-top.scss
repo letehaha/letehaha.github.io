@@ -1,0 +1,38 @@
+/* Arrow scroll top */
+.page-scroll-top{
+	position: fixed;
+	opacity: 0;
+	bottom: 80px;
+	right: 30px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	cursor: pointer;
+	background-color: rgba(0,0,0,.2);
+	transition: $transition-m, opacity $transition-l;
+	z-index: 998;
+}
+.page-scroll-top:hover{
+	background-color: rgba(0,0,0,.5);
+}
+.scroll-top__arrows{
+	position: relative;
+}
+.scroll-top__arrow{
+	display: inline-block;
+	position: absolute;
+	top: 12px;
+	width: 7px;
+	height: 2px;
+	background-color: #fff;
+}
+.scroll-top__arrow--left{
+	left: 7px;
+	transform: rotate(-45deg);
+}
+.scroll-top__arrow--right{
+	right: 7px;
+	transform: rotate(45deg);
+}
+/* Arrow scroll top ***END*** */
