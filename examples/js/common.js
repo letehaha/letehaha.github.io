@@ -228,7 +228,10 @@ $('#session').click(function(e) {
 		setTimeout(function(){
 			var boxWidth = $('.form-box').width();
 			$('.form-box').removeClass('form-box_is-close');
-			$('.form-box').addClass('form-box_center');
+			$('.form-box').css({
+				'right':'calc(50% - 200px)',
+				'bottom': '70%'
+			});
 			$('.btn-switch').hide();
 		}, 400);
 		setTimeout(function(){

@@ -1190,10 +1190,6 @@ header {
   -webkit-transform: translateY(95%);
           transform: translateY(95%); }
 
-.form-box_center {
-  right: calc(50% - 200px);
-  bottom: 70%; }
-
 .form-box {
   position: fixed;
   right: 20px;
