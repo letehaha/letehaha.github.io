@@ -171,6 +171,132 @@ body[dir='rtl'] .formError .formErrorArrow,
 body.rtl .formError .formErrorArrow {
   margin: -2px 13px 0 0; }
 
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  left: calc(50% - 225px);
+  top: calc(50% - 125px); }
+
+.envelope {
+  -webkit-transition: 3s;
+  transition: 3s; }
+
+.popup-thanks {
+  z-index: 1002;
+  width: 500px;
+  height: 250px;
+  background-color: #00a500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 0px #fff;
+  -webkit-transform: translateY(-600px);
+          transform: translateY(-600px);
+  -webkit-transition: .5s;
+  transition: .5s; }
+  .popup-thanks h1 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif; }
+  .popup-thanks h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif; }
+
+.envelope__bottom {
+  margin-top: 200px;
+  width: 450px;
+  height: 250px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: .3s;
+  transition: .3s; }
+
+.envelope__bottom--back {
+  position: absolute;
+  z-index: 999;
+  background: transparent; }
+
+.envelope__bottom--front {
+  position: absolute;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
+
+.top,
+.bottom,
+.right,
+.left {
+  display: none; }
+
+.top {
+  position: absolute;
+  top: 0px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  border-top: 180px solid #333;
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  -webkit-transform: rotatex(180deg);
+          transform: rotatex(180deg);
+  -webkit-transition: all 1s 1.5s;
+  transition: all 1s 1.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 100% 0%;
+          transform-origin: 100% 0%;
+  z-index: -1; }
+
+.right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 0;
+  height: 0;
+  border-top: 125px solid transparent;
+  border-right: 226px solid red;
+  border-bottom: 125px solid transparent;
+  z-index: 3; }
+
+.bottom {
+  position: absolute;
+  top: 125px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  border-bottom: 125px solid green;
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  z-index: 3;
+  overflow: hidden; }
+
+.left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  border-top: 125px solid transparent;
+  border-left: 226px solid #111;
+  border-bottom: 125px solid transparent;
+  z-index: 3; }
+
 body {
   font-family: 'Arial', sans-serif;
   width: 100%; }
@@ -819,17 +945,20 @@ header {
 .slick-arrow.slick-hidden {
   display: none; }
 
+.about-wrapper {
+  padding: 30px 0 60px; }
+
 .about-descr h1 {
   text-align: center;
   font-size: 32px;
   color: #333; }
 
 .about-elements {
-  margin: 100px; }
+  margin: 40px 100px 100px; }
 
 .about-element {
-  width: 40%;
-  padding: 50px;
+  width: 35%;
+  padding: 40px;
   border: 1px solid red;
   border-radius: 50%; }
   .about-element:nth-child(1) {
@@ -842,11 +971,11 @@ header {
       background: url("../img/arrow.png") no-repeat;
       background-size: cover;
       right: -145px;
-      top: 45px;
+      top: 35px;
       -webkit-transform: rotate(75deg);
               transform: rotate(75deg); }
   .about-element:nth-child(2) {
-    margin: -20px 0 -20px 33%;
+    margin: -25px 0 -25px 33%;
     position: relative; }
     .about-element:nth-child(2):after {
       position: absolute;
@@ -856,7 +985,7 @@ header {
       background: url("../img/arrow.png") no-repeat;
       background-size: cover;
       right: -145px;
-      top: 45px;
+      top: 35px;
       -webkit-transform: rotate(75deg);
               transform: rotate(75deg); }
     .about-element:nth-child(2):before {
@@ -866,7 +995,7 @@ header {
       height: 124px;
       background: url("../img/arrow.png") no-repeat;
       background-size: cover;
-      left: -155px;
+      left: -135px;
       top: 30px;
       -webkit-transform: rotate(255deg);
               transform: rotate(255deg); }
@@ -880,21 +1009,35 @@ header {
       height: 124px;
       background: url("../img/arrow.png") no-repeat;
       background-size: cover;
-      left: -155px;
+      left: -135px;
       top: 30px;
       -webkit-transform: rotate(255deg);
               transform: rotate(255deg); }
 
 .about-element-descr h2 {
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 15px; }
 
 .about-element-intro {
   text-align: center; }
   .about-element-intro p {
+    font-size: 15px;
     line-height: 1.5;
     color: #333; }
+
+.footer-wrapper {
+  background-color: #111;
+  padding: 90px 0;
+  text-align: center;
+  color: #AAA; }
+  .footer-wrapper .ft-list-elem {
+    display: inline-block;
+    margin-bottom: 30px; }
+  .footer-wrapper a {
+    color: #AAA;
+    font-size: 32px;
+    margin: 0 15px; }
 
 /* Arrow scroll top */
 .page-scroll-top {
@@ -1047,15 +1190,19 @@ header {
   -webkit-transform: translateY(95%);
           transform: translateY(95%); }
 
+.form-box_center {
+  right: calc(50% - 200px);
+  bottom: 70%; }
+
 .form-box {
   position: fixed;
   right: 20px;
   bottom: 15px;
-  z-index: 1000;
+  z-index: 1002;
   width: 400px;
   border-radius: 5px;
-  -webkit-transition: .3s;
-  transition: .3s; }
+  -webkit-transition: .7s;
+  transition: .7s; }
   .form-box .form-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1088,8 +1235,6 @@ header {
     color: #333;
     font-size: 1.3em;
     cursor: pointer; }
-    .form-box .btn-switch i {
-      display: none; }
     .form-box .btn-switch .btn-switch-minus {
       height: 25px;
       width: 25px;
@@ -1097,9 +1242,7 @@ header {
       border-radius: 5px;
       background-color: #110b73;
       color: #fff;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      display: none;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;

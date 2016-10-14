@@ -8,8 +8,17 @@ $(function() {
 
 //******************
 
+
+
+// animate blocks
+
 new WOW().init();
 
+//******************
+
+
+
+// form validation
 
 	$("#form-popup").validationEngine('attach',{
 		promptPosition : "bottomLeft", maxErrorsPerField : 1,
@@ -34,17 +43,21 @@ new WOW().init();
 				'custom[email]' : {
 					'message' : "* Error."
 				}
-			},
-			'#form-area' : {
-				'required' : {
-					'message' : "* This field is required"
-				},
-				'minSize' : {
-					'message' : "* Need more words"
-				}
 			}
+			// '#form-area' : {
+			// 	'required' : {
+			// 		'message' : "* This field is required"
+			// 	},
+			// 	'minSize' : {
+			// 		'message' : "* Need more words"
+			// 	}
+			// }
 		}
 	});
+
+//******************
+
+
 
 // form open/close
 
@@ -53,12 +66,12 @@ $('.btn-switch').click(function(e) {
 	var firstSpan = $('.btn-switch span');
 	var secondSpan = $('.btn-switch i');
 
-	if(firstSpan.is(':visible')){
+	if(secondSpan.is(':visible')){
+		firstSpan.css({'display':'flex'});
+		secondSpan.hide();
+	} else{
 		firstSpan.hide();
 		secondSpan.show();
-	} else{
-		firstSpan.show();
-		secondSpan.hide();
 	}
 
 	$('.form-box').toggleClass('form-box_is-close');
@@ -69,6 +82,7 @@ $('.btn-switch').click(function(e) {
 //******************
 
 
+
 // signin open/close
 
 $('#session').click(function(e) {
@@ -77,6 +91,7 @@ $('#session').click(function(e) {
 });
 
 //******************
+
 
 
 // showing button Up
@@ -190,28 +205,100 @@ $('#session').click(function(e) {
 //****************
 
 // form
-
+	
 	$("#form-popup").submit(function() {
+		// $('.popup-container').css({'display':'flex'});
+		// setTimeout(function(){
+		// 	$('.popup-container').hide();
+		// }, 5000);
+		// setTimeout(function(){
+		// 	$("#form-popup").trigger('reset');
+		// 	$(".form-box").addClass('form-box_is-close');
+		// 	$('.btn-switch span').hide();
+		// 	$('.btn-switch i').show();
+		// }, 500);
+		submitFormAnimations();
 
-		if (true){
-			post_data = {
-				'user_name': $('input[name=form-name]').val(),
-				'user_sname': $('input[name=form-sname]').val(),
-				'phone_email': $('input[name=form-email]').val(),
-				'msg': $('textarea[name=form-area]').val()
-			};
-
-
-			$.post('../mail.php', post_data, function(response) {
-				if (response.type == 'error') {
-					console.log(0);
-				} else {
-					console.log(1);
-				}
-			}, 'json');
-		}
-		
+		return false;
 	});
+
+	function submitFormAnimations(e) {
+		$('.envelope__bottom--back').css({'background':'#333'});
+		$('.top, .bottom, .right, .left').show();
+		setTimeout(function(){
+			var boxWidth = $('.form-box').width();
+			$('.form-box').removeClass('form-box_is-close');
+			$('.form-box').addClass('form-box_center');
+			$('.btn-switch').hide();
+		}, 400);
+		setTimeout(function(){
+			$('.form-box').css({'z-index':'1'})
+		}, 300);
+		setTimeout(function(){
+			// $('.form-box').css({'bottom': '60%'});
+			$('.envelope__bottom').css({'margin-top':'50px'});
+		}, 1000);
+		setTimeout(function(){
+			$('.form-box').css({
+				'bottom': '170px',
+				'overflow': 'hidden',
+				'height' : '225px'
+			})
+		}, 1100);
+		setTimeout(function(){
+			$('.top').css({
+				'transform': 'rotatex(0deg)',
+				'z-index': '3'
+			});
+		}, 1100);
+		setTimeout(function(){
+			$('.envelope').css({
+				'transform':'translateY(-600px)',
+				'overflow':'hidden'
+			});
+		}, 3500);
+		setTimeout(function(){
+			$('.popup-thanks').css({'transform':'translateY(0px)'});
+		}, 4000);
+		setTimeout(function(){
+			submitFormPropag();
+		}, 6500);
+	}
+
+	function submitFormPropag(e) {
+		$('.form-box').addClass('form-box_is-close');
+		$('.form-box').css({
+			'bottom':'15px',
+			'overflow':'visible',
+			'height':'auto',
+			'z-index': '1002',
+			'right': '-450px'
+		});
+		$('.btn-switch').css({'display':'flex'});
+		$('.btn-switch i').css({'display':'flex'});
+		$('.btn-switch span').hide();
+		$('.envelope__bottom').css({'margin-top':'200px'});
+		$('.top').css({
+			'transform': 'rotatex(180deg)',
+			'z-index': '-1'
+		});
+		$('.envelope').css({
+			'transform':'translateY(0px)',
+			'overflow':'visible'
+		});
+		$('.popup-thanks').css({'transform':'translateY(-600px)'});
+		$('.envelope__bottom--back').css({'background':'transparent'});
+		$('.top, .bottom, .right, .left').hide();
+		$("#form-popup").trigger('reset');
+	}
+
+	function ifClickOut(e) {
+		$('.popup-container').click(function(e) {
+			
+		});
+	}
+
+	ifClickOut();
 
 //****************
 

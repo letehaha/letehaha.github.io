@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css"/>
-	<!-- <script src="https://use.fontawesome.com/bfc33b43b1.js"></script> -->
 	<!-- For locale browser -->
 	<link rel="alternate" hreflang="x-default" href="">
 	<!-- End For locale browser -->
@@ -270,7 +269,19 @@
 			<h2>And more</h2>
 		</section>
 
-		<footer></footer>
+		<footer>
+			<div class="footer-wrapper">
+				<ul class="ft-list-follow">
+					<li class="ft-list-elem"><a href="https://www.facebook.com/tamelosgroup/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li class="ft-list-elem"><a href="index.html"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li class="ft-list-elem"><a href="http://twitter.com/tamelos"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li class="ft-list-elem"><a href="https://www.linkedin.com/company/tamelos"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				</ul>
+				<div class="ft-copyright">
+					<p>© Copyright. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
 	</div>
 
 	<div id="page-scroll-top" class="page-scroll-top">
@@ -279,38 +290,57 @@
 			<span class="scroll-top__arrow scroll-top__arrow--right"></span>
 		</div>
 	</div>
+	
 
-	<div class="form-box form-box_is-close">
-		<div class="btn-switch btn-switch_is-close">
-			<span class="btn-switch-minus">+</span>
-			<i class="fa fa-envelope" aria-hidden="true"></i>
+
+	<div class="popup-container">
+
+		<section class="envelope envelope__bottom envelope__bottom--back">
+
+			<div class="form-box form-box_is-close">
+				<div class="btn-switch btn-switch_is-close">
+					<span class="btn-switch-minus">_</span>
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+				</div>
+				<form id="form-popup" class="form-popup" method="POST" action="php/mail.php">
+					<div class="form-descr">
+						<label for="form-name">Say Hello</label>
+					</div>
+					<div class="form-container">
+						<div class="form-input form-name">
+							<label class="input-label" for="form-name">First Name</label>
+							<input type="text" id="form-name" class="validate[required,minSize[3]]" required name="form-name">
+						</div>
+						<div class="form-input form-sname">
+							<label class="input-label" for="form-sname">Last Name</label>
+							<input type="text" id="form-sname" class="validate[required,minSize[3]]" required name="form-sname">
+						</div>
+					</div>
+					<div class="form-input form-email">
+						<label class="input-label" for="form-email">eMail</label>
+						<input type="email" class="validate[required, custom[email]]" id="form-email" name="form-email">
+					</div>
+					<div class="form-area">
+						<label class="input-label" for="form-area">Your message:</label>
+						<textarea name="form-area"  required id="form-area" cols="30" rows="5"></textarea> <!-- class="validate[required,minSize[10]]" -->
+					</div>
+					<div class="form-btn">
+						<button id="form-btn" class="form-submit" type="submit">Send</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="top"></div>
+			<div class="right"></div>
+			<div class="bottom"></div>
+			<div class="left"></div>
+		</section>
+
+		<div class="popup-thanks">
+			<h2 class="confirm" id="name">Your email has been sent</h2>
+			<h1 class="confirm" >Thank you!</h1>
 		</div>
-		<form id="form-popup" method="POST" class="form-popup" action="mail.php">
-			<div class="form-descr">
-				<label for="form-name">Say Hello</label>
-			</div>
-			<div class="form-container">
-				<div class="form-input form-name">
-					<label class="input-label" for="form-name">First Name</label>
-					<input type="text" id="form-name" class="validate[required,minSize[3]]" required name="form-name">
-				</div>
-				<div class="form-input form-sname">
-					<label class="input-label" for="form-sname">Last Name</label>
-					<input type="text" id="form-sname" class="validate[required,minSize[3]]" required name="form-sname">
-				</div>
-			</div>
-			<div class="form-input form-email">
-				<label class="input-label" for="form-email">eMail</label>
-				<input type="email" class="validate[required, custom[email]]" id="form-email" name="form-email">
-			</div>
-			<div class="form-area">
-				<label class="input-label" for="form-area">Your message:</label>
-				<textarea name="form-area" class="validate[required,minSize[10]]" required id="form-area" cols="30" rows="5"></textarea>
-			</div>
-			<div class="form-btn">
-				<button id="form-btn" class="form-submit" type="submit">Send</button>
-			</div>
-		</form>
+
 	</div>
 
 
