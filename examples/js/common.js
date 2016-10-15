@@ -200,7 +200,7 @@ $('#session').click(function(e) {
 		}, 1700);
 		setTimeout(function(){
 			$('.top, .bottom, .right, .left, .envelope-bg').css({
-				'transform':'translateY(-600px)',
+				'transform':'translateY(-800px)',
 				'overflow':'hidden'
 			});
 			formBox.css({
