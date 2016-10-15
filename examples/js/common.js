@@ -169,8 +169,8 @@ $('#session').click(function(e) {
 	});
 
 	function submitFormAnimations() {
-		$('.envelope__bottom--back').css({'background':'#333'});
-		$('.top, .bottom, .right, .left').show();
+		$('.envelope-bg').css({'background':'#113'});
+		$('.top, .bottom, .right, .left, .envelope-bg').show();
 		setTimeout(function(){
 			var boxWidth = $('.form-box').width();
 			formBox.removeClass('form-box_is-close');
@@ -181,36 +181,35 @@ $('#session').click(function(e) {
 			$('.btn-switch').hide();
 		}, 400);
 		setTimeout(function(){
-			formBox.css({'z-index':'1'})
-		}, 300);
-		setTimeout(function(){
-			$('.envelope').css({'top':'250px'});
+			// $('.envelope-bg').css({'transition':'.5s'});
+			$('.right, .left, .top, .envelope-bg').css({'top':'250px'});
+			$('.bottom').css({'top':'375px'});
 		}, 1000);
 		setTimeout(function(){
 			formBox.css({
-				'bottom': '170px',
+				'bottom': '160px',
 				'overflow': 'hidden',
 				'height' : '225px'
 			})
+			$('.top').css({'z-index':'1005'});
 		}, 1100);
 		setTimeout(function(){
 			$('.top').css({
-				'transform': 'rotatex(0deg)',
-				'z-index': '3'
+				'transform': 'rotatex(0deg)'
 			});
-		}, 1100);
+		}, 1700);
 		setTimeout(function(){
-			$('.envelope').css({
+			$('.top, .bottom, .right, .left, .envelope-bg').css({
 				'transform':'translateY(-600px)',
 				'overflow':'hidden'
 			});
 			formBox.css({
 				'bottom': '850px'
 			})
-		}, 3500);
+		}, 2500);
 		setTimeout(function(){
 			$('.popup-thanks').css({'top':'200px'});
-		}, 4000);
+		}, 3000);
 		setTimeout(function(){
 			submitFormPropag();
 		}, 5500);
@@ -219,6 +218,7 @@ $('#session').click(function(e) {
 	function submitFormPropag() {
 		formBox.removeClass('form-box_transition');
 		setTimeout(function(){
+
 			formBox.addClass('form-box_is-close');
 			formBox.css({
 				'bottom':'15px',
@@ -230,18 +230,23 @@ $('#session').click(function(e) {
 			$('.btn-switch').css({'display':'flex'});
 			$('.btn-switch i').css({'display':'flex'});
 			$('.btn-switch span').hide();
-			$('.envelope__bottom').css({'margin-top':'200px'});
+
+			$('.top, .bottom, .right, .left, .envelope-bg').css({
+				'transform': 'rotateY(0deg)'
+			});
+			$('.right, .left, .top, .envelope-bg').css({'top':'300px'});
+			$('.bottom').css({'top':'425px'});
 			$('.top').css({
 				'transform': 'rotatex(180deg)',
-				'z-index': '-1'
+				'z-index': '1'
 			});
 			$('.envelope').css({
 				'transform':'translateY(0px)',
 				'overflow':'visible'
 			});
 			$('.popup-thanks').css({'top':'-300px'});
-			$('.envelope__bottom--back').css({'background':'transparent'});
-			$('.top, .bottom, .right, .left').hide();
+			// $('.envelope-bg').css({'background':'transparent'});
+			$('.top, .bottom, .right, .left, .envelope-bg').hide();
 			$("#form-popup").trigger('reset');
 		}, 100)
 	}
