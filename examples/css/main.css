@@ -211,7 +211,7 @@ body.rtl .formError .formErrorArrow {
 .envelope-bg {
   position: fixed;
   left: calc(50% - 225px);
-  top: 300px;
+  top: calc(50% + 55px);
   width: 450px;
   height: 250px;
   -webkit-transition: .5s;
@@ -226,7 +226,7 @@ body.rtl .formError .formErrorArrow {
 
 .top {
   position: fixed;
-  top: 300px;
+  top: calc(50% + 55px);
   left: calc(50% - 225px);
   width: 0;
   height: 0;
@@ -245,7 +245,7 @@ body.rtl .formError .formErrorArrow {
 
 .right {
   position: fixed;
-  top: 300px;
+  top: calc(50% + 55px);
   right: calc(50% - 225px);
   width: 0;
   height: 0;
@@ -258,7 +258,7 @@ body.rtl .formError .formErrorArrow {
 
 .bottom {
   position: fixed;
-  top: 425px;
+  top: calc(50% + 180px);
   left: calc(50% - 225px);
   width: 0;
   height: 0;
@@ -272,7 +272,7 @@ body.rtl .formError .formErrorArrow {
 
 .left {
   position: fixed;
-  top: 300px;
+  top: calc(50% + 55px);
   left: calc(50% - 225px);
   width: 0;
   height: 0;
@@ -287,7 +287,6 @@ body {
   font-family: 'Arial', sans-serif;
   width: 100%; }
 
-header,
 section {
   height: 100vh; }
 
@@ -1183,7 +1182,7 @@ header {
 .form-box {
   position: fixed;
   right: 20px;
-  bottom: 15px;
+  top: 455px;
   z-index: 1000;
   width: 400px;
   border-radius: 5px; }

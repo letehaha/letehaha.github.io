@@ -176,18 +176,18 @@ $('#session').click(function(e) {
 			formBox.removeClass('form-box_is-close');
 			formBox.css({
 				'right':'calc(50% - 200px)',
-				'bottom': '70%'
+				'top': '10%'
 			});
 			$('.btn-switch').hide();
 		}, 400);
 		setTimeout(function(){
 			// $('.envelope-bg').css({'transition':'.5s'});
-			$('.right, .left, .top, .envelope-bg').css({'top':'250px'});
-			$('.bottom').css({'top':'375px'});
+			$('.right, .left, .top, .envelope-bg').css({'top':'calc(50% - 149px)'});
+			$('.bottom').css({'top':'calc(50% - 26px)'});
 		}, 1000);
 		setTimeout(function(){
 			formBox.css({
-				'bottom': '160px',
+				'top': '310px',
 				'overflow': 'hidden',
 				'height' : '225px'
 			})
@@ -204,7 +204,7 @@ $('#session').click(function(e) {
 				'overflow':'hidden'
 			});
 			formBox.css({
-				'bottom': '850px'
+				'top': '-500px'
 			})
 		}, 2500);
 		setTimeout(function(){
@@ -221,7 +221,7 @@ $('#session').click(function(e) {
 
 			formBox.addClass('form-box_is-close');
 			formBox.css({
-				'bottom':'15px',
+				'top':'455px',
 				'overflow':'visible',
 				'height':'auto',
 				'z-index': '1001',
@@ -234,8 +234,8 @@ $('#session').click(function(e) {
 			$('.top, .bottom, .right, .left, .envelope-bg').css({
 				'transform': 'rotateY(0deg)'
 			});
-			$('.right, .left, .top, .envelope-bg').css({'top':'300px'});
-			$('.bottom').css({'top':'425px'});
+			$('.right, .left, .top, .envelope-bg').css({'top':'calc(50% + 55px)'});
+			$('.bottom').css({'top':'calc(50% + 180px)'});
 			$('.top').css({
 				'transform': 'rotatex(180deg)',
 				'z-index': '1'
@@ -245,7 +245,6 @@ $('#session').click(function(e) {
 				'overflow':'visible'
 			});
 			$('.popup-thanks').css({'top':'-300px'});
-			// $('.envelope-bg').css({'background':'transparent'});
 			$('.top, .bottom, .right, .left, .envelope-bg').hide();
 			$("#form-popup").trigger('reset');
 		}, 100)
