@@ -175,15 +175,13 @@ body.rtl .formError .formErrorArrow {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1001;
-  left: calc(50% - 225px);
-  top: calc(50% - 125px); }
-
-.envelope {
-  -webkit-transition: 3s;
-  transition: 3s; }
+  z-index: 1005;
+  width: 100%; }
 
 .popup-thanks {
+  position: fixed;
+  left: calc(50% - 225px);
+  top: -300px;
   z-index: 1002;
   width: 500px;
   height: 250px;
@@ -203,8 +201,6 @@ body.rtl .formError .formErrorArrow {
           align-items: center;
   border-radius: 15px;
   box-shadow: 0px 0px 0px 0px #fff;
-  -webkit-transform: translateY(-600px);
-          transform: translateY(-600px);
   -webkit-transition: .5s;
   transition: .5s; }
   .popup-thanks h1 {
@@ -219,24 +215,15 @@ body.rtl .formError .formErrorArrow {
     font-weight: 300;
     font-family: 'Open Sans', sans-serif; }
 
-.envelope__bottom {
-  margin-top: 200px;
+.envelope {
+  position: fixed;
+  left: calc(50% - 225px);
+  z-index: 1000;
+  top: 350px;
   width: 450px;
   height: 250px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: .3s;
-  transition: .3s; }
-
-.envelope__bottom--back {
-  position: absolute;
-  z-index: 999;
-  background: transparent; }
-
-.envelope__bottom--front {
-  position: absolute;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg); }
+  -webkit-transition: .5s;
+  transition: .5s; }
 
 .top,
 .bottom,
@@ -272,7 +259,7 @@ body.rtl .formError .formErrorArrow {
   border-top: 125px solid transparent;
   border-right: 226px solid red;
   border-bottom: 125px solid transparent;
-  z-index: 3; }
+  z-index: 1003; }
 
 .bottom {
   position: absolute;
@@ -283,7 +270,7 @@ body.rtl .formError .formErrorArrow {
   border-bottom: 125px solid green;
   border-left: 225px solid transparent;
   border-right: 225px solid transparent;
-  z-index: 3;
+  z-index: 1003;
   overflow: hidden; }
 
 .left {
@@ -295,7 +282,7 @@ body.rtl .formError .formErrorArrow {
   border-top: 125px solid transparent;
   border-left: 226px solid #111;
   border-bottom: 125px solid transparent;
-  z-index: 3; }
+  z-index: 1003; }
 
 body {
   font-family: 'Arial', sans-serif;
@@ -1190,15 +1177,17 @@ header {
   -webkit-transform: translateY(95%);
           transform: translateY(95%); }
 
+.form-box_transition {
+  -webkit-transition: .5s;
+  transition: .5s; }
+
 .form-box {
   position: fixed;
   right: 20px;
   bottom: 15px;
-  z-index: 1002;
+  z-index: 1001;
   width: 400px;
-  border-radius: 5px;
-  -webkit-transition: .7s;
-  transition: .7s; }
+  border-radius: 5px; }
   .form-box .form-container {
     display: -webkit-box;
     display: -ms-flexbox;

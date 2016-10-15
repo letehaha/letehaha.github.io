@@ -7,17 +7,11 @@ $(function() {
 	bodyPage.sectionScroll();
 
 //******************
-
-
-
 // animate blocks
 
 new WOW().init();
 
 //******************
-
-
-
 // form validation
 
 	$("#form-popup").validationEngine('attach',{
@@ -44,40 +38,8 @@ new WOW().init();
 					'message' : "* Error."
 				}
 			}
-			// '#form-area' : {
-			// 	'required' : {
-			// 		'message' : "* This field is required"
-			// 	},
-			// 	'minSize' : {
-			// 		'message' : "* Need more words"
-			// 	}
-			// }
 		}
 	});
-
-//******************
-
-
-
-// form open/close
-
-$('.btn-switch').click(function(e) {
-
-	var firstSpan = $('.btn-switch span');
-	var secondSpan = $('.btn-switch i');
-
-	if(secondSpan.is(':visible')){
-		firstSpan.css({'display':'flex'});
-		secondSpan.hide();
-	} else{
-		firstSpan.hide();
-		secondSpan.show();
-	}
-
-	$('.form-box').toggleClass('form-box_is-close');
-	$('.form-popup').toggleClass('btn-switch_is-close');
-	e.preventDefault();
-});
 
 //******************
 
@@ -130,9 +92,6 @@ $('#session').click(function(e) {
 	});
 
 //****************
-
-
-
 // button Down
 
 	$('#btn-down').click(function(e) {
@@ -168,15 +127,11 @@ $('#session').click(function(e) {
 	});
 
 //****************
-
-
-
 //use function fixmenu
 
 	$(".nav-wrapper").fixmenu();
 
 //****************
-
 // smooth scroll when click on link in menu
 
 	$('a.burger-panel__elem-link').smoothScroll({
@@ -193,7 +148,7 @@ $('#session').click(function(e) {
 		nextArrow: '<div class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
 		prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
 		dots: true,
-		autoplay: true,
+		// autoplay: true,
 		autoplaySpeed: 3000, 	// speed from the previous to the next slide
 		draggable: false,
 		speed: 1000, 					// speed transition
@@ -207,42 +162,32 @@ $('#session').click(function(e) {
 // form
 	
 	$("#form-popup").submit(function() {
-		// $('.popup-container').css({'display':'flex'});
-		// setTimeout(function(){
-		// 	$('.popup-container').hide();
-		// }, 5000);
-		// setTimeout(function(){
-		// 	$("#form-popup").trigger('reset');
-		// 	$(".form-box").addClass('form-box_is-close');
-		// 	$('.btn-switch span').hide();
-		// 	$('.btn-switch i').show();
-		// }, 500);
+
 		submitFormAnimations();
 
 		return false;
 	});
 
-	function submitFormAnimations(e) {
+	function submitFormAnimations() {
 		$('.envelope__bottom--back').css({'background':'#333'});
 		$('.top, .bottom, .right, .left').show();
 		setTimeout(function(){
 			var boxWidth = $('.form-box').width();
-			$('.form-box').removeClass('form-box_is-close');
-			$('.form-box').css({
+			formBox.removeClass('form-box_is-close');
+			formBox.css({
 				'right':'calc(50% - 200px)',
 				'bottom': '70%'
 			});
 			$('.btn-switch').hide();
 		}, 400);
 		setTimeout(function(){
-			$('.form-box').css({'z-index':'1'})
+			formBox.css({'z-index':'1'})
 		}, 300);
 		setTimeout(function(){
-			// $('.form-box').css({'bottom': '60%'});
-			$('.envelope__bottom').css({'margin-top':'50px'});
+			$('.envelope').css({'top':'250px'});
 		}, 1000);
 		setTimeout(function(){
-			$('.form-box').css({
+			formBox.css({
 				'bottom': '170px',
 				'overflow': 'hidden',
 				'height' : '225px'
@@ -259,40 +204,46 @@ $('#session').click(function(e) {
 				'transform':'translateY(-600px)',
 				'overflow':'hidden'
 			});
+			formBox.css({
+				'bottom': '850px'
+			})
 		}, 3500);
 		setTimeout(function(){
-			$('.popup-thanks').css({'transform':'translateY(0px)'});
+			$('.popup-thanks').css({'top':'200px'});
 		}, 4000);
 		setTimeout(function(){
 			submitFormPropag();
-		}, 6500);
+		}, 5500);
 	}
 
-	function submitFormPropag(e) {
-		$('.form-box').addClass('form-box_is-close');
-		$('.form-box').css({
-			'bottom':'15px',
-			'overflow':'visible',
-			'height':'auto',
-			'z-index': '1002',
-			'right': '-450px'
-		});
-		$('.btn-switch').css({'display':'flex'});
-		$('.btn-switch i').css({'display':'flex'});
-		$('.btn-switch span').hide();
-		$('.envelope__bottom').css({'margin-top':'200px'});
-		$('.top').css({
-			'transform': 'rotatex(180deg)',
-			'z-index': '-1'
-		});
-		$('.envelope').css({
-			'transform':'translateY(0px)',
-			'overflow':'visible'
-		});
-		$('.popup-thanks').css({'transform':'translateY(-600px)'});
-		$('.envelope__bottom--back').css({'background':'transparent'});
-		$('.top, .bottom, .right, .left').hide();
-		$("#form-popup").trigger('reset');
+	function submitFormPropag() {
+		formBox.removeClass('form-box_transition');
+		setTimeout(function(){
+			formBox.addClass('form-box_is-close');
+			formBox.css({
+				'bottom':'15px',
+				'overflow':'visible',
+				'height':'auto',
+				'z-index': '1001',
+				'right': '20px'
+			});
+			$('.btn-switch').css({'display':'flex'});
+			$('.btn-switch i').css({'display':'flex'});
+			$('.btn-switch span').hide();
+			$('.envelope__bottom').css({'margin-top':'200px'});
+			$('.top').css({
+				'transform': 'rotatex(180deg)',
+				'z-index': '-1'
+			});
+			$('.envelope').css({
+				'transform':'translateY(0px)',
+				'overflow':'visible'
+			});
+			$('.popup-thanks').css({'top':'-300px'});
+			$('.envelope__bottom--back').css({'background':'transparent'});
+			$('.top, .bottom, .right, .left').hide();
+			$("#form-popup").trigger('reset');
+		}, 100)
 	}
 
 	function ifClickOut(e) {
@@ -304,6 +255,42 @@ $('#session').click(function(e) {
 	ifClickOut();
 
 //****************
+
+// form open/close
+
+var formBox = $('.form-box');
+
+$('.btn-switch').click(function(e) {
+
+	var firstSpan = $('.btn-switch span');
+	var secondSpan = $('.btn-switch i');
+
+	if(secondSpan.is(':visible')){
+		firstSpan.css({'display':'flex'});
+		secondSpan.hide();
+	} else{
+		firstSpan.hide();
+		secondSpan.show();
+	}
+
+	if(formBox.hasClass('form-box_is-close')){
+		formBox.addClass('form-box_transition');
+		formBox.removeClass('form-box_is-close');
+	} else{
+		formBox.addClass('form-box_is-close');
+		setTimeout(function(){
+			formBox.removeClass('form-box_transition');
+		}, 700);
+	}
+
+	$('.form-popup').toggleClass('btn-switch_is-close');
+	e.preventDefault();
+});
+
+//******************
+
+
+
 
 });
 
