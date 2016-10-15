@@ -30,7 +30,7 @@
 
 
 .envelope-bg{
-	position: absolute;
+	position: fixed;
 	left: calc(50% - 225px);
 	top: 300px;
 	width: 450px;
@@ -46,7 +46,7 @@
 }
 
 .top{
-  position:absolute;
+  position: fixed;
   top:300px;
   // left:-1px;
   left: calc(50% - 225px);
@@ -63,7 +63,7 @@
 }
 
 .right{
-  position:absolute;
+  position: fixed;
   top:300px;
   // right:0px;
   right: calc(50% - 225px);
@@ -77,7 +77,7 @@
 }
 
 .bottom{
-  position:absolute;
+  position: fixed;
   top:425px;
   // left:-1px;
   left: calc(50% - 225px);
@@ -92,7 +92,7 @@
 }
 
 .left{
-  position:absolute;
+  position: fixed;
   top:300px;
   // left:0px;
   left: calc(50% - 225px);
