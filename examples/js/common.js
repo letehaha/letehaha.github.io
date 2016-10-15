@@ -176,18 +176,18 @@ $('#session').click(function(e) {
 			formBox.removeClass('form-box_is-close');
 			formBox.css({
 				'right':'calc(50% - 200px)',
-				'top': '10%'
+				'bottom':'300px'
 			});
 			$('.btn-switch').hide();
 		}, 400);
 		setTimeout(function(){
-			// $('.envelope-bg').css({'transition':'.5s'});
-			$('.right, .left, .top, .envelope-bg').css({'top':'calc(50% - 149px)'});
-			$('.bottom').css({'top':'calc(50% - 26px)'});
+			$('.top').css({'bottom':'190px'});
+			$('.right, .left, .envelope-bg').css({'bottom':'120px'});
+			$('.bottom').css({'bottom':'120px'});
 		}, 1000);
 		setTimeout(function(){
 			formBox.css({
-				'top': '310px',
+				'bottom': '140px',
 				'overflow': 'hidden',
 				'height' : '225px'
 			})
@@ -204,11 +204,11 @@ $('#session').click(function(e) {
 				'overflow':'hidden'
 			});
 			formBox.css({
-				'top': '-500px'
+				'bottom': '1050px'
 			})
 		}, 2500);
 		setTimeout(function(){
-			$('.popup-thanks').css({'top':'200px'});
+			$('.popup-thanks').css({'bottom':'200px'});
 		}, 3000);
 		setTimeout(function(){
 			submitFormPropag();
@@ -221,7 +221,7 @@ $('#session').click(function(e) {
 
 			formBox.addClass('form-box_is-close');
 			formBox.css({
-				'top':'455px',
+				'bottom':'15px',
 				'overflow':'visible',
 				'height':'auto',
 				'z-index': '1001',
@@ -234,8 +234,8 @@ $('#session').click(function(e) {
 			$('.top, .bottom, .right, .left, .envelope-bg').css({
 				'transform': 'rotateY(0deg)'
 			});
-			$('.right, .left, .top, .envelope-bg').css({'top':'calc(50% + 55px)'});
-			$('.bottom').css({'top':'calc(50% + 180px)'});
+			$('.right, .left, .bottom, .envelope-bg').css({'bottom':'20px'});
+			$('.top').css({'bottom':'90px'});
 			$('.top').css({
 				'transform': 'rotatex(180deg)',
 				'z-index': '1'
@@ -244,7 +244,7 @@ $('#session').click(function(e) {
 				'transform':'translateY(0px)',
 				'overflow':'visible'
 			});
-			$('.popup-thanks').css({'top':'-300px'});
+			$('.popup-thanks').css({'bottom':'900px'});
 			$('.top, .bottom, .right, .left, .envelope-bg').hide();
 			$("#form-popup").trigger('reset');
 		}, 100)

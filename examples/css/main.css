@@ -174,7 +174,7 @@ body.rtl .formError .formErrorArrow {
 .popup-thanks {
   position: fixed;
   left: calc(50% - 225px);
-  top: -300px;
+  bottom: 900px;
   z-index: 1002;
   width: 500px;
   height: 250px;
@@ -211,7 +211,7 @@ body.rtl .formError .formErrorArrow {
 .envelope-bg {
   position: fixed;
   left: calc(50% - 225px);
-  top: calc(50% + 55px);
+  bottom: 20px;
   width: 450px;
   height: 250px;
   -webkit-transition: .5s;
@@ -226,7 +226,7 @@ body.rtl .formError .formErrorArrow {
 
 .top {
   position: fixed;
-  top: calc(50% + 55px);
+  bottom: 90px;
   left: calc(50% - 225px);
   width: 0;
   height: 0;
@@ -245,7 +245,7 @@ body.rtl .formError .formErrorArrow {
 
 .right {
   position: fixed;
-  top: calc(50% + 55px);
+  bottom: 20px;
   right: calc(50% - 225px);
   width: 0;
   height: 0;
@@ -258,7 +258,7 @@ body.rtl .formError .formErrorArrow {
 
 .bottom {
   position: fixed;
-  top: calc(50% + 180px);
+  bottom: 20px;
   left: calc(50% - 225px);
   width: 0;
   height: 0;
@@ -272,7 +272,7 @@ body.rtl .formError .formErrorArrow {
 
 .left {
   position: fixed;
-  top: calc(50% + 55px);
+  bottom: 20px;
   left: calc(50% - 225px);
   width: 0;
   height: 0;
@@ -1182,7 +1182,7 @@ header {
 .form-box {
   position: fixed;
   right: 20px;
-  top: 455px;
+  bottom: 15px;
   z-index: 1000;
   width: 400px;
   border-radius: 5px; }
