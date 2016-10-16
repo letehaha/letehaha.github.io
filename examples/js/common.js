@@ -42,16 +42,33 @@ new WOW().init();
 	});
 
 
-	var form = document.getElementById('form-popup');
+	// var form = document.getElementById('form-popup');
 
-	form.noValidate = true;
+	// form.noValidate = true;
 
-	form.addEventListener('submit', function(event) {
-		if (!event.target.checkValidity()) {
-			event.preventDefault(); 
-			alert('Please, fill the form'); 
-		}
-	}, false);
+	// form.addEventListener('submit', function(event) {
+	// 	if (!event.target.checkValidity()) {
+	// 		event.preventDefault(); 
+	// 		alert('Please, fill the form'); 
+	// 	}
+	// }, false);
+
+	$("form").submit(function(e) {
+
+    var ref = $(this).find("[required]");
+
+    $(ref).each(function(){
+        if ( $(this).val() == '' )
+        {
+            alert("Required field should not be blank.");
+
+            $(this).focus();
+
+            e.preventDefault();
+            return false;
+        }
+    });  return true;
+});
 
 //******************
 
