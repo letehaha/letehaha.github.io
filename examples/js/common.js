@@ -41,6 +41,18 @@ new WOW().init();
 		}
 	});
 
+
+	var form = document.getElementById('form-popup');
+
+	form.noValidate = true;
+
+	form.addEventListener('submit', function(event) {
+		if (!event.target.checkValidity()) {
+			event.preventDefault(); 
+			alert('Please, fill the form'); 
+		}
+	}, false);
+
 //******************
 
 
@@ -169,23 +181,26 @@ $('#session').click(function(e) {
 	});
 
 	function submitFormAnimations() {
-		$('.envelope-bg').css({'background':'#113'});
-		$('.top, .bottom, .right, .left, .envelope-bg').show();
+		$('.envelope-bg').css({'background':'rgba(246, 224, 161, 1.0)'}); // show bg of the envelope
+		$('.top, .bottom, .right, .left, .envelope-bg').show(); // show elements of the envelope
+
 		setTimeout(function(){
 			var boxWidth = $('.form-box').width();
-			formBox.removeClass('form-box_is-close');
-			formBox.css({
+			formBox.removeClass('form-box_is-close'); 
+			formBox.css({                                 // centering form
 				'right':'calc(50% - 200px)',
 				'bottom':'300px'
 			});
-			$('.btn-switch').hide();
+			$('.btn-switch').hide();  										// hide icon of the form
 		}, 400);
-		setTimeout(function(){
+
+		setTimeout(function(){                                 // position for elements of the envelope
 			$('.top').css({'bottom':'190px'});
 			$('.right, .left, .envelope-bg').css({'bottom':'120px'});
 			$('.bottom').css({'bottom':'120px'});
 		}, 1000);
-		setTimeout(function(){
+
+		setTimeout(function(){																// put form to the envelope
 			formBox.css({
 				'bottom': '140px',
 				'overflow': 'hidden',
@@ -193,12 +208,14 @@ $('#session').click(function(e) {
 			})
 			$('.top').css({'z-index':'1005'});
 		}, 1100);
-		setTimeout(function(){
+
+		setTimeout(function(){                              	// "close" envelope
 			$('.top').css({
 				'transform': 'rotatex(0deg)'
 			});
 		}, 1700);
-		setTimeout(function(){
+
+		setTimeout(function(){																// translate the envelope to out screen
 			$('.top, .bottom, .right, .left, .envelope-bg').css({
 				'transform':'translateY(-800px)',
 				'overflow':'hidden'
@@ -207,10 +224,12 @@ $('#session').click(function(e) {
 				'bottom': '1050px'
 			})
 		}, 2500);
-		setTimeout(function(){
+
+		setTimeout(function(){ 																// show "Thanks" pop up
 			$('.popup-thanks').css({'bottom':'200px'});
 		}, 3000);
-		setTimeout(function(){
+
+		setTimeout(function(){ 																// return form in initial position
 			submitFormPropag();
 		}, 5500);
 	}
