@@ -72,7 +72,7 @@ $(document).ready(function(){
 	};
 
 
-    if (is_touch_device()){
+  if (is_touch_device()){
 		$('#slider-wrap ul li').on('swipeleft', function(e) {
 			slideRight();
 		});
