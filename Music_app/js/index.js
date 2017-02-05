@@ -16,15 +16,16 @@ $(function() {
 		$('.js-service-btn').removeClass('service-btn_back');
 		$('.js-service').removeClass('is-show');
 	});
-
 	$('.js-search__lable').click(function() {
+		$('.search__title').fadeOut(300);
+		customSelect();
 		$('.js-search__form').removeClass('search__form_hide');
 		setTimeout(function(){
 			$('.js-ui-select').addClass('is-show');
 		}, 500);
 	});
 	$(document).mouseup(function (e){
-		var div = $('.js-search__form');
+		var div = $('.search');
 		if (!div.is(e.target)
 				&& div.has(e.target).length === 0) {
 			$('.search-field').val('');
@@ -33,6 +34,9 @@ $(function() {
 			setTimeout(function(){
 				$('.js-search__form').addClass('search__form_hide');
 			},100);
+			setTimeout(function(){
+				$('.search__title').fadeIn(300);
+			},200);
 			
 		}
 	});
@@ -50,7 +54,7 @@ setInterval(function(){
 },100);
 
 
-(function(){
+function customSelect(){
 
 	let select 							 = $('.ui-select'),
 			selectItem					 = $('.ui-select-item'),
@@ -90,7 +94,7 @@ setInterval(function(){
 			selectList.css({'max-height': '0px'});
 		}
 	});
-	$(document).mouseup(function (e){
+	$(document).mouseup(function(e){
 		var div = select;
 		if (!div.is(e.target)
 				&& div.has(e.target).length === 0) {
@@ -99,4 +103,5 @@ setInterval(function(){
 			selectList.css({'max-height': '0px'}); 
 		}
 	});
-})();
+};
+customSelect();
