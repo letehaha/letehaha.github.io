@@ -1,0 +1,20 @@
+<svg id="doteck-cat-line-icon" xmlns="http://www.w3.org/2000/svg" width="5" height="66" viewBox="0 0 5 66">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #241d66;
+      }
+
+      .cls-2 {
+        fill: #ff5821;
+      }
+
+      .cls-3 {
+        fill: #007fbc;
+      }
+    </style>
+  </defs>
+  <rect id="_1" data-name="1" class="cls-1" width="5" height="22"/>
+  <rect id="_3" data-name="3" class="cls-2" y="44" width="5" height="22"/>
+  <rect id="_2" data-name="2" class="cls-3" y="22" width="5" height="22"/>
+</svg>
