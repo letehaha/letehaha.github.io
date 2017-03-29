@@ -1,5 +1,10 @@
 # letehaha.github.io
 
+##doteck
+Landing page for doteck.ru
+
+[letehaha.github.io/doteck_ru/](http://letehaha.github.io/doteck_ru/)
+
 ##Atlantida
 layout PSD. No adaptive. View on width 1440px. IE 10+<br>
 
@@ -48,9 +53,3 @@ PSD layout. No adaptive. View on width 1440px
 [letehaha.github.io/tests/test-four/](http://letehaha.github.io/tests/test-four/)
 
 [letehaha.github.io/tests/test-five/](http://letehaha.github.io/tests/test-five/)
-
-
-##doteck
-Landing page for doteck.ru
-
-[letehaha.github.io/doteck_ru/](http://letehaha.github.io/doteck_ru/)
