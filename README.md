@@ -1,5 +1,11 @@
 # letehaha.github.io
 
+##StoryHaus
+Landing page StoryHaus
+
+[letehaha.github.io/storyhaus/](http://letehaha.github.io/storyhaus/)
+
+
 ##doteck
 Landing page for doteck.ru
 
